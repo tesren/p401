@@ -124,6 +124,12 @@ header .logo{
     color: var(--white);
     padding: 1.1vh 4vw;
     cursor: pointer;
+    transition: 0.2s;
+}
+.btn-p401:hover{
+    background-color: var(--white);
+    color: var(--black);
+    transition: 0.2s;
 }
 .content .textBox img{
     width: 1.5vw;
@@ -281,7 +287,7 @@ background: #B61D37;
 .texto-container{
     margin: auto;
     height: auto;
-    width: 32vw;
+    
 }
 .border-img{
     height:14.3vh;
@@ -375,7 +381,6 @@ input:focus, textarea:focus, select:focus{
     background-color: #B61D37;
 }
 .form-control{
-    border-radius: 25px;
     margin-bottom: 1rem;
 }
 .form-text{
@@ -446,7 +451,7 @@ footer p{
     align-items: center;
 }
 .black-ball img{
-    max-width: 38%;
+    max-width: 55%;
     height: auto;
 }
 @keyframes fade{
@@ -515,7 +520,26 @@ footer p{
     padding: 1.1vh 4vw;
     font-size: 3.8vh;
     cursor: pointer;
-    border-radius: 3rem;
+    border-radius: 0;
+}
+.button-404:hover{
+    background-color: var(--white);
+    color: var(--black);
+    transition: 0.2s ease-in-out;
+}
+.esf-insta-follow-btn{
+    border: 2px solid var(--white) !important;
+    background-color: transparent !important;
+    color: var(--white) !important;
+    font-size: 1rem !important;
+    cursor: pointer !important;
+    border-radius: 0 !important;
+    transition: 0.2s;
+}
+.esf-insta-follow-btn:hover{
+    background-color: var(--white)!important;
+    color: var(--black)!important;
+    transition: 0.2s;
 }
 
 @media (min-width: 1300px) and (max-width: 1520px){
@@ -701,11 +725,10 @@ footer p{
     .texto-container{
         margin: auto;
         height: auto;
-        width: 70vw;
     }
     .circle{
-        height: 35vw;
-        width: 35vw;
+        height: 32vw;
+        width: 32vw;
     }
     .icon{
         width: 15vw;
@@ -734,6 +757,10 @@ footer p{
     .slide-img{
         width: 77vw;
         height: 65vh;
+    }
+    .circle-mobile-text p{
+        margin: 0px 80px 40px 80px
+        ;
     }
 
 }

@@ -42,7 +42,7 @@ function punto401_script_enqueue() {
     wp_enqueue_style('customstyle', get_template_directory_uri() . '/assets/css/p401-style.css', array(), '1.0.0', 'all');
 
 
-    wp_enqueue_script( 'jqeury', 'https://code.jquery.com/jquery-3.4.1.slim.min.js' );
+    wp_enqueue_script( 'jqeury', get_template_directory_uri().'/assets/js/jquery-3.6.0.min.js' );
     wp_enqueue_script( 'jsdelivr', 'https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js' );
     wp_enqueue_script( 'swiper', 'https://unpkg.com/swiper/swiper-bundle.min.js' );
     wp_enqueue_script( 'bootstrap-cdn-js', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js' );

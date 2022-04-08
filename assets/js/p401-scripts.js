@@ -13,7 +13,7 @@ function toggleMenu(){
 $(document).ready(function() {
   $('#autoWidth').lightSlider({
   autoWidth:true,
-  loop:true,
+  loop:false,
   onSliderLoad: function() {
       $('#autoWidth').removeClass('cS-hidden');
   } 
@@ -60,7 +60,7 @@ var swiper = new Swiper(".mySwiper", {
   {
     invert: true,
   },
-  loop: true,
+  loop: false,
 });
 
 /**Contact form */
