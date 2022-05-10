@@ -203,7 +203,7 @@ header .logo{
 .circle-title{
     color:var(--white);
     font-weight: 500;
-    font-size: 3vh;
+    font-size: 1.5rem;
 }
 .white-text{
     color:var(--white);

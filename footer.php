@@ -1,8 +1,8 @@
     <footer>
     <div class="bg-gradiant pt-5 pb-5">
-        <div class="row justify-content-center">
+        <div class="row justify-content-between">
 
-            <div class="col-12 col-lg-4 mb-4 mb-md-0">
+            <div class="col-12 col-lg-5 mb-4 mb-md-0">
                 <div class="footer-logo">
 
                     <a href="<?php echo get_home_url(); ?>">
@@ -32,7 +32,7 @@
 
             </div>
 
-            <div class="col-12 col-lg-3 mb-4 mb-md-0">
+            <div class="col-12 col-lg-5 mb-4 mb-md-0">
 
                 <div class="text-left ml-5 ml-md-0 fs-5">
                     <div class="text-bold mb-3">Información de Contacto</div>
@@ -43,12 +43,12 @@
 
             </div>
 
-            <div class="col-12 col-lg-3 mb-4 mb-md-0">
+            <!-- <div class="col-12 col-lg-3 mb-4 mb-md-0">
                 <div class="text-bold ml-5 ml-md-0">Instagram</div>
                 <div class="row">
-                    <?php echo do_shortcode( '[my-instagram-feed  user_id="17841443804702200" skin_id="34" feeds_per_page="3" caption_words="5" cache_unit="1" cache_duration="days" load_more="0"  links_new_tab="1"  show_stories="0" ]', true ) ?>
+                    <?php //echo do_shortcode( '[jr_instagram id="1"]', true ) ?>
                 </div>
-            </div>
+            </div> -->
 
         </div>
     </div>

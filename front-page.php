@@ -224,33 +224,33 @@
 
         <div class="col-12 col-sm-6 col-xl-3 text-center">
             <div class="circle mb-4">
-                <img src="<?php echo get_template_directory_uri() .'/assets/images/icon1.svg';?>" alt="Metodologia" class="icon">
+                <img src="<?php echo get_template_directory_uri() .'/assets/images/foto-video-realestate.svg';?>" alt="Foto y Video de Real Estate" class="icon">
             </div>
-            <div class="circle-title text-center mb-3">Metodologia</div>
+            <div class="circle-title text-center mb-3">Fotografía y Video de Real Estate</div>
             <p class="white-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
         </div>
 
         <div class="col-12 col-sm-6 col-xl-3 text-center">
             <div class="circle mb-4">
-                <img src="<?php echo get_template_directory_uri() .'/assets/images/diseno.svg';?> " alt="Diseño" class="icon">
+                <img src="<?php echo get_template_directory_uri() .'/assets/images/flag-house.svg';?> " alt="" class="icon">
             </div>
-            <div class="circle-title text-center mb-3">Diseño</div>
+            <div class="circle-title text-center mb-3">Persuadimos a la audiencia</div>
             <p class="white-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
         </div>
 
         <div class="col-12 col-sm-6 col-xl-3 text-center">
             <div class="circle mb-4">
-                <img src="<?php echo get_template_directory_uri() .'/assets/images/update.svg';?>" alt="Actualizados" class="icon2">
+                <img src="<?php echo get_template_directory_uri() .'/assets/images/phone.svg';?>" alt="Phone" class="icon2">
             </div>
-            <div class="circle-title text-center mb-3">Actualizados</div>
+            <div class="circle-title text-center mb-3">Tu propiedad llega a más personas</div>
             <p class="white-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
         </div>
 
         <div class="col-12 col-sm-6 col-xl-3 pb-5 text-center">
             <div class="circle mb-4">
-                <img src="<?php echo get_template_directory_uri() .'/assets/images/crative.svg';?>" alt="Creatividad" class="icon" >
+                <img src="<?php echo get_template_directory_uri() .'/assets/images/ocho.svg';?> " alt="" class="icon">
             </div>
-            <div class="circle-title text-center mb-3">Creatividad</div>
+            <div class="circle-title text-center mb-3">Más de 8 años nos respaldan</div>
             <p class="white-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
         </div>
         
@@ -258,8 +258,9 @@
     <div style="height: 100px; overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M0.00,49.98 C194.13,200.81 299.09,-104.11 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #1a1a1a;"></path></svg></div>
 </div>
 <div id="portafolio"></div>
+
 <!-- PORTAFOLIO -->
-<div class="title401 text-center mt-5 pb-5">Portafolio<img src="<?php echo get_template_directory_uri() .'/assets/images/decoration2.svg';?>" alt="" class="decoration2"></div>
+<!-- <div class="title401 text-center mt-5 pb-5">Portafolio<img src="<?php //echo get_template_directory_uri() .'/assets/images/decoration2.svg';?>" alt="" class="decoration2"></div> -->
 
 <?php if(have_rows('portafolio')): ?>
     <div class="row align-items-center justify-content-center mr-5 ml-5">
