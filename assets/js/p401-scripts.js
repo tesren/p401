@@ -10,19 +10,6 @@ function toggleMenu(){
   navigation.classList.toggle('active')
 }
 
-$(document).ready(function() {
-  $('#autoWidth').lightSlider({
-  autoWidth:true,
-  loop:false,
-  onSliderLoad: function() {
-      $('#autoWidth').removeClass('cS-hidden');
-  } 
-  });  
-  });
-
-$('#blogCarousel').carousel({
-    interval: 5000
-});
 
 const menuBtn = document.querySelector('.menu-btn');
 let menuOpen = false;
@@ -36,31 +23,35 @@ menuBtn.addEventListener('click', () => {
     }
 });
 
-var swiper = new Swiper(".mySwiper", {
-  speed:2000,
-  effect: "coverflow",
-  grabCursor: true,
-  centeredSlides: true,
-  slidesPerView: "auto",
-  coverflowEffect: {
-    rotate: 0,
-    stretch: 0,
-    depth: 0,
-    modifier: 1,
-    slideShadows: true,
-  },
-  pagination: {
-    el: ".swiper-pagination",
-  },
-  autoplay: 
-  {
-    delay: 2000,
-  },
-  mousewheel: 
-  {
-    invert: true,
-  },
-  loop: false,
+
+$(document).ready( function () { 
+  var splideTeam = new Splide( '#our_team', {
+      perPage: 4,
+      perMove: 1,
+      pagination:false,
+      rewind : true,
+      breakpoints: {
+          992: {
+              perPage: 1,
+          },
+      },
+  } );
+
+  var splideClients = new Splide( '#our_clients', {
+    perPage: 3,
+    perMove: 1,
+    pagination:false,
+    rewind : true,
+    breakpoints: {
+        992: {
+            perPage: 1,
+        },
+    },
+} );
+
+  splideTeam.mount();
+  splideClients.mount();
+
 });
 
 /**Contact form */

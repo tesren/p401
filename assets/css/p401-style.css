@@ -16,7 +16,6 @@ body{
 section{
     position: relative;
     width: 100%;
-    min-height: 100vh;
     padding: 90px;
     display: flex;
     justify-content: space-between;
@@ -653,7 +652,7 @@ footer p{
         display: none;
     }
     .content .textBox {
-        max-width: 70vw;
+        max-width: 85vw;
         padding-left: 0;
     }
     .swiper-slide img{
@@ -755,11 +754,10 @@ footer p{
         font-size: 4.7vh;
     }
     .slide-img{
-        width: 77vw;
         height: 65vh;
     }
     .circle-mobile-text p{
-        margin: 0px 80px 40px 80px
+        margin: 0px 40px 40px 40px
         ;
     }
 

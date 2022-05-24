@@ -4,20 +4,20 @@
 
 <?php $hero = get_field('slider');?>
 <div class="bg-gradiant">
-    <section>
+    <section style="min-height:100vh;">
 
         <div class="content">
 
-            <div class="swiper mySwiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                    <img src="<?php echo get_template_directory_uri() .'/assets/images/laptop.webp';?>" alt="Laptop"/>
+            <div id="carouselExampleSlidesOnly" class="carousel slide px-5 my-5 my-lg-0" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="d-block w-100" src="<?php echo get_template_directory_uri() .'/assets/images/laptop.webp';?>" alt="Laptop"/>
                     </div>
-                    <div class="swiper-slide">
-                    <img src="<?php echo get_template_directory_uri() .'/assets/images/camera.webp';?>" alt="Camara de Fotografía" loading="lazy"/>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="<?php echo get_template_directory_uri() .'/assets/images/camera.webp';?>" alt="Camara de Fotografía" loading="lazy"/>
                     </div>
-                    <div class="swiper-slide">
-                    <img src="<?php echo get_template_directory_uri() .'/assets/images/phone.webp';?>" alt="Smart Phone" loading="lazy"/>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="<?php echo get_template_directory_uri() .'/assets/images/phone.webp';?>" alt="Smart Phone" loading="lazy"/>
                     </div>
                 </div>
             </div>
@@ -31,7 +31,7 @@
 
                 <?php if($hero['boton']):?>
                    
-                    <a href="<?php echo $hero ['boton'];?>" class="btn-p401">
+                    <a href="<?php echo $hero ['boton'];?>" class="btn btn-outline-light rounded-0 fs-3 px-5">
                         <?php echo $hero ['titulo_del_boton'];?>
                     </a>
                   
@@ -49,7 +49,7 @@
 
 <!-- CONFIAR EN NOSOTROS -->
 
-<div class="title401 text-center mt-5 pb-5">¿Porque confiar en nosotros?<img src="<?php echo get_template_directory_uri() .'/assets/images/decoration2.svg';?>" alt="" class="decoration2"></div>
+<div class="title401 text-center mt-5 pb-5 px-4 px-lg-0">¿Porque confiar en nosotros?<img src="<?php echo get_template_directory_uri() .'/assets/images/decoration2.svg';?>" alt="" class="decoration2"></div>
 
 <div class="bg-gradiant circulos circle-mobile-text">
 <div style="height: 150px; overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M0.00,49.98 C149.99,150.00 271.49,-49.98 500.00,49.98 L500.00,0.00 L0.00,0.00 Z" style="stroke: none; fill: #1a1a1a;"></path></svg></div>
@@ -60,7 +60,7 @@
                 <img src="<?php echo get_template_directory_uri() .'/assets/images/icon1.svg';?>" alt="Metodologia" class="icon">
             </div>
             <div class="circle-title text-center mb-3">Metodologia</div>
-            <p class="white-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            <p class="white-text">Atraemos a tu cliente potencial mediante la creación de contenido valioso y experiencias hechas a la medida.</p>
         </div>
 
         <div class="col-12 col-sm-6 col-xl-3 text-center">
@@ -68,7 +68,7 @@
                 <img src="<?php echo get_template_directory_uri() .'/assets/images/diseno.svg';?> " alt="Diseño" class="icon">
             </div>
             <div class="circle-title text-center mb-3">Diseño</div>
-            <p class="white-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            <p class="white-text">Creamos recursos visualmente atractivos para tu marca en base a lo que busques trasmitirle a tu público.</p>
         </div>
 
         <div class="col-12 col-sm-6 col-xl-3 text-center">
@@ -76,7 +76,7 @@
                 <img src="<?php echo get_template_directory_uri() .'/assets/images/update.svg';?>" alt="Actualizados" class="icon2">
             </div>
             <div class="circle-title text-center mb-3">Actualizados</div>
-            <p class="white-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            <p class="white-text">Nuestro equipo se mantiene a la vanguardia de todas las novedades referentes a nuestras áreas de trabajo.</p>
         </div>
 
         <div class="col-12 col-sm-6 col-xl-3 pb-5 text-center">
@@ -84,7 +84,7 @@
                 <img src="<?php echo get_template_directory_uri() .'/assets/images/crative.svg';?>" alt="Creatividad" class="icon" >
             </div>
             <div class="circle-title text-center mb-3">Creatividad</div>
-            <p class="white-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            <p class="white-text">Tenemos la capacidad de cambiar e inventar a través de los retos que se nos presentan para encontrar o crear las soluciones más óptimas para ti.</p>
         </div>
         
     </div>
@@ -95,46 +95,48 @@
 
 <div class="title401 text-center mt-5">Nuestro Equipo<img src="<?php echo get_template_directory_uri() .'/assets/images/decoration2.svg';?>" alt="" class="decoration2"></div>
     
-    <?php if(have_rows('equipo')): ?>
-        <div class="slider">
-        <ul id="autoWidth" class="cs-hidden">
+<?php if(have_rows('equipo')): ?>
+    <section class="splide px-0" aria-label="Nuestro Equipo" id="our_team">
+        <div class="splide__track w-100">
+            <ul class="splide__list">
 
-        <?php while(have_rows('equipo')): the_row();
+                <?php while(have_rows('equipo')): the_row();
+                    $foto = get_sub_field('foto');
+                    $foto_hover = get_sub_field('foto_hover');
+                    $icono = get_sub_field('icono');
+                    $cargo = get_sub_field('cargo');
+                    $nombre = get_sub_field('nombre');
+                    $titulo = get_sub_field('titulo');
+                ?>
+                    
+                    <li class="splide__slide">
+                        <div class="box">
+                            <div class="slide-img portafolio">
 
-            $foto = get_sub_field('foto');
-            $foto_hover = get_sub_field('foto_hover');
-            $icono = get_sub_field('icono');
-            $cargo = get_sub_field('cargo');
-            $nombre = get_sub_field('nombre');
-            $titulo = get_sub_field('titulo');
-
-    ?>
-            
-        <li class="item-a">
-            <div class="box">
-                <div class="slide-img portafolio">
-
-                    <!-- <div class="black-ball"><img src="<?php echo $icono['url'];?>"></div> -->
-                    <img src="<?php echo $foto['url'];?>" alt="<?php echo $foto['title'];?>" class="img-fluid image" loading="lazy">
-                    <div class="overlay">
-                        <div class="black-ball"><img src="<?php echo $icono['url'];?>"></div>
-                        <img src="<?php echo $foto_hover['url'];?>" alt="<?php echo $foto_hover['title'];?>" class="img-fluid image" loading="lazy">
-                    </div>
+                                <!-- <div class="black-ball"><img src="<?php echo $icono['url'];?>"></div> -->
+                                <img src="<?php echo $foto['url'];?>" alt="<?php echo $nombre; ?>" class="img-fluid image" loading="lazy">
+                                <div class="overlay">
+                                    <div class="black-ball"><img src="<?php echo $icono['url'];?>" alt=""></div>
+                                    <img src="<?php echo $foto_hover['url'];?>" alt="<?php echo $nombre; ?>" class="img-fluid image" loading="lazy">
+                                </div>
+                                        
+                            </div>
+                        </div>
+                        <div class="detail-box">
                             
-                </div>
-            </div>
-            <div class="detail-box">
-                
-                <div class="circle-title text-center"><?php echo $cargo; ?></div>
-                <p class="white-text pt-2"><?php echo $nombre; ?></p>
+                            <div class="circle-title text-center"><?php echo $cargo; ?></div>
+                            <p class="white-text pt-2"><?php echo $nombre; ?></p>
 
-            </div>		
-        </li>
+                        </div>		
+                    </li>
 
-    <?php endwhile;?>
-    </ul>
-    <?php endif; ?>
-    </div>
+                <?php endwhile;?>
+            </ul>
+        </div>
+        
+    </section>
+<?php endif; ?>
+
 
     <div id="servicios"></div>
  <!-- SERVICIOS -->
@@ -148,7 +150,7 @@
             <div class="contenido401">
             <img src="<?php echo get_template_directory_uri() .'/assets/images/real.svg';?>" alt="Foto y video Real Estate" height="45" class="mb-4">
             <h5 class="card-title">Fotografia y Video<br>Real Estate</h5>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ornare eget odio in rhoncus Donec sed tellus..</p>
+            <p class="card-text">Proporcionamos material audiovisual profesional con las que podrás presentar tus bienes raíces al mundo</p>
             </div>
         </div>
         </div>
@@ -161,7 +163,7 @@
             <div class="contenido401">
             <img src="<?php echo get_template_directory_uri() .'/assets/images/social.svg';?>" alt="Social Media Management" height="45" class="mb-4">
             <h5 class="card-title">Social Media</h5>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ornare eget odio in rhoncus Donec sed tellus..</p>
+            <p class="card-text">Ten presencia en las redes sociales y crea una comunidad que esté interesada en tu producto.</p>
             </div>
         </div>
         </div>
@@ -174,7 +176,7 @@
             <div class="contenido401">
             <img src="<?php echo get_template_directory_uri() .'/assets/images/design.svg';?>" alt="Imagen corporativa" height="45" class="mb-4">
             <h5 class="card-title">Desarrollar tu imagen<br>corporativa</h5>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ornare eget odio in rhoncus Donec sed tellus..</p>
+            <p class="card-text">Creamos tu imagen corporativa en base a los valores, ideas y objetivos que quieras transmitirle a tus futuros clientes</p>
             </div>
         </div>
         </div>
@@ -189,8 +191,8 @@
             <div class="cuadro401"></div>
             <div class="contenido401">
             <img src="<?php echo get_template_directory_uri() .'/assets/images/seo.svg';?>" alt="SEO" height="45" class="mb-4">
-            <h5 class="card-title">SEO (Search Engine<br>Optimazation)</h5>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ornare eget odio in rhoncus Donec sed tellus..</p>
+            <h5 class="card-title">SEO (Search Engine Optimazation)</h5>
+            <p class="card-text">Nos encargamos de mejorar la visibilidad de tu sitio web en los diferentes buscadores que existen</p>
             </div>
         </div>
         </div>
@@ -203,7 +205,7 @@
             <div class="contenido401">
             <img src="<?php echo get_template_directory_uri() .'/assets/images/web.svg';?>" alt="Diseño Web" height="45" class="mb-4">
             <h5 class="card-title">Diseño Web</h5>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ornare eget odio in rhoncus Donec sed tellus..</p>
+            <p class="card-text">Ten tu negocio abierto 24/7 con un sitio web atractivo y funcional, todo hecho en base a lo que necesites</p>
             </div>
         </div>
         </div>
@@ -227,7 +229,7 @@
                 <img src="<?php echo get_template_directory_uri() .'/assets/images/foto-video-realestate.svg';?>" alt="Foto y Video de Real Estate" class="icon">
             </div>
             <div class="circle-title text-center mb-3">Fotografía y Video de Real Estate</div>
-            <p class="white-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            <p class="white-text">Creamos los recursos audiovisuales ideales para tus bienes raíces.</p>
         </div>
 
         <div class="col-12 col-sm-6 col-xl-3 text-center">
@@ -235,7 +237,7 @@
                 <img src="<?php echo get_template_directory_uri() .'/assets/images/flag-house.svg';?> " alt="" class="icon">
             </div>
             <div class="circle-title text-center mb-3">Persuadimos a la audiencia</div>
-            <p class="white-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            <p class="white-text">Logramos que tus clientes potenciales perciban tus bienes raíces de formas únicas, generando un primer encuentro diferente.</p>
         </div>
 
         <div class="col-12 col-sm-6 col-xl-3 text-center">
@@ -243,7 +245,7 @@
                 <img src="<?php echo get_template_directory_uri() .'/assets/images/phone.svg';?>" alt="Phone" class="icon2">
             </div>
             <div class="circle-title text-center mb-3">Tu propiedad llega a más personas</div>
-            <p class="white-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            <p class="white-text">Nos aseguramos de que la información de tu propiedad llegue a la máxima cantidad de compradores potenciales.</p>
         </div>
 
         <div class="col-12 col-sm-6 col-xl-3 pb-5 text-center">
@@ -251,7 +253,7 @@
                 <img src="<?php echo get_template_directory_uri() .'/assets/images/ocho.svg';?> " alt="" class="icon">
             </div>
             <div class="circle-title text-center mb-3">Más de 8 años nos respaldan</div>
-            <p class="white-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            <p class="white-text">Nos especializamos en bienes raíces y nuestros años de experiencia no nos dejarán mentir, hablemos el mismo idioma, entenderemos tus necesidades a la perfección.</p>
         </div>
         
     </div>
@@ -297,87 +299,62 @@
 <!-- CLIENTES -->
 <div class="title401 text-center mt-5 pb-5">Ellos confian en nosotros<img src="<?php echo get_template_directory_uri() .'/assets/images/decoration2.svg';?>" alt="" class="decoration2"></div>
 
-<div class="row blog">
-    <div class="col-md-12">
-        <div id="blogCarousel" class="carousel slide" data-ride="carousel">
-
-            <ol class="carousel-indicators">
-                <li data-target="#blogCarousel" data-slide-to="0" class="active"></li>
-                <li data-target="#blogCarousel" data-slide-to="1"></li>
-            </ol>
-
-            
-            <div class="carousel-inner">
-
-                <div class="carousel-item active">
-                    <div class="row align-items-center justify-content-center mr-5 ml-5">
-
-                        <div class="col-sm-4 mb-5">
-                            <div class="red-shadow">
-                            <div style="height: 150px;" class="card401 p-4">
-                                <img src="<?php echo get_template_directory_uri() .'/assets/images/domus.svg';?>" alt="Domus logo" class="imginbox401">
-                            </div>
-                            </div>
-                        </div>
-                    
-                        <div class="col-sm-4 mb-5">
-                            <div class="red-shadow">
-                            <div style="height: 150px;" class="card401 p-4">
-                                <img src="<?php echo get_template_directory_uri() .'/assets/images/c21.svg';?>" alt="C21 Logo" class="imginbox401">
-                            </div>
-                            </div>
-                        </div>
-
-                        <div class="col-sm-4 mb-5">
-                            <div class="red-shadow">
-                            <div style="height: 150px;" class="card401 p-4">
-                                <img src="<?php echo get_template_directory_uri() .'/assets/images/cyc.svg';?>" alt="Casas y Condos logo" class="imginbox401">
-                            </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
+<section class="splide p-0" aria-label="Nuestro Equipo" id="our_clients">
+    <div class="splide__track w-100">
+        <ul class="splide__list">
                 
-
-                <div class="carousel-item">
-                    <div class="row align-items-center justify-content-center mr-5 ml-5">
-
-                        <div class="col-sm-4 mb-5">
-                            <div class="red-shadow">
-                            <div style="height: 150px;" class="card401 p-4">
-                                <img src="<?php echo get_template_directory_uri() .'/assets/images/boutique.svg';?>" alt="Elegance Boutique logo" class="imginbox401">
-                            </div>
-                            </div>
-                        </div>
-
-                        <div class="col-sm-4 mb-5">
-                            <div class="red-shadow">
-                            <div style="height: 150px;" class="card401 p-4">
-                                <img src="<?php echo get_template_directory_uri() .'/assets/images/remax.svg';?>" alt="Remax Logo" class="imginbox401">
-                            </div>
-                            </div>
-                        </div>
-
-                        <div class="col-sm-4 mb-5">
-                            <div class="red-shadow">
-                            <div style="height: 150px;" class="card401 p-4">
-                                <img src="<?php echo get_template_directory_uri() .'/assets/images/one.svg';?>" alt="One Real Estate logo" class="imginbox401">
-                            </div>
-                            </div>
-                        </div>
-
-
+            <li class="splide__slide p-4">
+                <div class="red-shadow">
+                    <div style="height: 150px;" class="card401 p-4">
+                        <img src="<?php echo get_template_directory_uri() .'/assets/images/domus.svg';?>" alt="Domus logo" class="imginbox401">
                     </div>
-                    
                 </div>
+            </li>
 
-            </div>
-        
-        </div>
+            <li class="splide__slide p-4">
+                <div class="red-shadow">
+                    <div style="height: 150px;" class="card401 p-4">
+                        <img src="<?php echo get_template_directory_uri() .'/assets/images/c21.svg';?>" alt="C21 Logo" class="imginbox401">
+                    </div>
+                </div>
+            </li>
 
+            <li class="splide__slide p-4">
+                <div class="red-shadow">
+                    <div style="height: 150px;" class="card401 p-4">
+                        <img src="<?php echo get_template_directory_uri() .'/assets/images/cyc.svg';?>" alt="Casas y Condos logo" class="imginbox401">
+                    </div>
+                </div>
+            </li>
+
+            <li class="splide__slide p-4">
+                <div class="red-shadow">
+                    <div style="height: 150px;" class="card401 p-4">
+                        <img src="<?php echo get_template_directory_uri() .'/assets/images/villas-logo.jpg';?>" alt="Villas las Bonitas logo" class="imginbox401">
+                    </div>
+                </div>
+            </li>
+
+            <li class="splide__slide p-4">
+                <div class="red-shadow">
+                    <div style="height: 150px;" class="card401 p-4">
+                        <img src="<?php echo get_template_directory_uri() .'/assets/images/remax.svg';?>" alt="Remax Logo" class="imginbox401">
+                    </div>
+                </div>
+            </li>
+
+            <li class="splide__slide p-4">
+                <div class="red-shadow">
+                    <div style="height: 150px;" class="card401 p-4">
+                        <img src="<?php echo get_template_directory_uri() .'/assets/images/one.svg';?>" alt="One Real Estate logo" class="imginbox401">
+                    </div>
+                </div>
+            </li>
+
+        </ul>
     </div>
-</div>
+        
+</section>
 
 <!-- TESTIMONIOS -->
 <div class="title401 text-center my-5 pt-5">Testimonios<img src="<?php echo get_template_directory_uri() .'/assets/images/decoration2.svg';?>" alt="" class="decoration2"></div>

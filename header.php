@@ -40,15 +40,12 @@
 <div id="inicio"></div>    
     <header>
         
-        <a href="index.php"
+        <a href="/" aria-label="Punto401 Logo">
             <?php 
-
                 $custom_logo_id = get_theme_mod( 'custom_logo' );
                 $image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
-                
             ?>
-        >
-        <img src="<?php echo $image[0]; ?>" alt="" class="logo">
+            <img src="<?php echo $image[0]; ?>" alt="Logo de Punto401" class="logo">
         </a>
         
         <div class="menu-btn" onclick="toggleMenu()">

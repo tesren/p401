@@ -36,17 +36,17 @@ add_action('init', 'punto401_theme_setup');
 /* CSS Y JS */
 
 function punto401_script_enqueue() {
-    wp_enqueue_style( 'bootstrap-cdn-css', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' );
-    wp_enqueue_style( 'swiper-css', 'https://unpkg.com/swiper/swiper-bundle.min.css' );
+    wp_enqueue_style( 'bootstrap-css', get_template_directory_uri() .'/assets/css/bootstrap.min.css' );
+    wp_enqueue_style( 'splide-css', get_template_directory_uri() .'/assets/css/splide.min.css' );
     wp_enqueue_style('lightslider', get_template_directory_uri() . '/assets/css/lightslider.css', array(), '1.0.0', 'all');
+    wp_enqueue_style('font_awesome', get_template_directory_uri() . '/assets/css/all.min.css', array(), '6.1.1', 'all');
     wp_enqueue_style('customstyle', get_template_directory_uri() . '/assets/css/p401-style.css', array(), '1.0.0', 'all');
 
 
     wp_enqueue_script( 'jqeury', get_template_directory_uri().'/assets/js/jquery-3.6.0.min.js' );
-    wp_enqueue_script( 'jsdelivr', 'https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js' );
-    wp_enqueue_script( 'swiper', 'https://unpkg.com/swiper/swiper-bundle.min.js' );
-    wp_enqueue_script( 'bootstrap-cdn-js', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js' );
-    wp_enqueue_script( 'font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js' );
+    wp_enqueue_script( 'splide', get_template_directory_uri() .'/assets/js/splide.min.js' );
+    wp_enqueue_script( 'bootstrap-js', get_template_directory_uri() .'/assets/js/bootstrap.bundle.min.js' );
+    wp_enqueue_script( 'font-awesome', get_template_directory_uri() .'/assets/js/all.min.js' );
     wp_enqueue_script('lightslider', get_template_directory_uri() . '/assets/js/lightslider.js', array(), '1.0.0', true);
     wp_enqueue_script('customjs', get_template_directory_uri() . '/assets/js/p401-scripts.js', array(), '1.0.0', true);
 
