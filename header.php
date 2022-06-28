@@ -6,6 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Punto 401 - Agencia de Marketing Digital en Puerto Vallarta</title>
     <meta name="description" content="¡Somos un grupo de jóvenes apasionados por lo que hacemos! El respeto, la honestidad y el trabajo en equipo nos distingue. Nuestro objetivo es sumar esfuerzos para acompañarte en este trayecto por el universo digital.">
+    
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-PZX7WBD');</script>
+    <!-- End Google Tag Manager -->
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-VXYYZ3WC4J"></script>
     <script>
@@ -36,7 +45,14 @@
 
     <?php wp_head(); ?>
 </head>
+
 <body>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PZX7WBD"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
 <div id="inicio"></div>    
     <header>
         
@@ -45,7 +61,7 @@
                 $custom_logo_id = get_theme_mod( 'custom_logo' );
                 $image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
             ?>
-            <img src="<?php echo $image[0]; ?>" alt="Logo de Punto401" class="logo">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" class="logo">
         </a>
         
         <div class="menu-btn" onclick="toggleMenu()">

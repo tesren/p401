@@ -88,7 +88,12 @@ header .logo{
     position: relative;
     max-width: 13vw;
 }
-
+.mt-6{margin-top: 6rem;}
+.mb-6{margin-bottom: 6rem;}
+.my-6{
+  margin-top: 6rem;
+  margin-bottom: 6rem;
+}
 
 /* 1ST SECTION */
 .content{
@@ -103,7 +108,7 @@ header .logo{
     max-width: 45vw;
     padding-left: 4vw;
 }
-.content .textBox h2{
+.content .textBox h2, .content .textBox h1{
     color: var(--white);
     font-size: 4.5vw;
     margin-bottom: 2vh;
@@ -622,7 +627,7 @@ footer p{
         transform: rotate(-45deg) translate(35px, 35px);
     }
     /* 1ST */
-    .content .textBox h2{
+    .content .textBox h2, .content .textBox h1{
         text-align: center;
         font-size: 5vh;
         margin-bottom: 1.5rem;
@@ -692,8 +697,9 @@ footer p{
         width: 487px;
         height: 350px;
     }
-    .content .textBox h2{
+    .content .textBox h2, .content .textBox h1{
         margin-top: 0;
+        font-size: 5vh;
     }
     .menu-btn{
         width: 50px;
@@ -715,9 +721,7 @@ footer p{
     .content .textBox p{
         font-size: 2.3vh;
     }
-    .content .textBox h2{
-        font-size: 5vh;
-    }
+   
     .desaparecer{
         display: none;
     }

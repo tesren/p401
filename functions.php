@@ -86,12 +86,13 @@ function punto401_script_enqueue() {
 
     
     require get_template_directory() . '/inc/messages-cpt.php';
+    require get_template_directory() . '/inc/websites-cpt.php';
 
 
     function check_post_type_and_remove_media_buttons() {
         global $current_screen;
         // Replace following array items with your own custom post types
-        $post_types = array('messages');
+        $post_types = array('messages, website');
         if (in_array($current_screen->post_type,$post_types)) {
         remove_action('media_buttons', 'media_buttons');
         }

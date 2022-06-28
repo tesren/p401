@@ -1,7 +1,7 @@
 <?php get_header();?>
 
 <?php if( have_posts() ):?>
-    <h1 class="mt-6 mb-5 text-center">Portafolio</h1>
+    <h1 class="mt-6 mb-5 text-center">Portafolio de Sitios Web</h1>
     <div class="row justify-content-center mb-5">
         <?php while( have_posts() ): the_post();?>
 
