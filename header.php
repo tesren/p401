@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Punto 401 - Agencia de Marketing Digital en Puerto Vallarta</title>
-    <meta name="description" content="¡Somos un grupo de jóvenes apasionados por lo que hacemos! El respeto, la honestidad y el trabajo en equipo nos distingue. Nuestro objetivo es sumar esfuerzos para acompañarte en este trayecto por el universo digital.">
+    <title>Punto401 - Agencia de Marketing Digital en Puerto Vallarta</title>
+    <meta name="description" content="Agencia de Marketing Digital especializada en Bienes Raíces, creamos recursos audiovisuales, sitios web, tu imagen corporativa y manejamos tus redes sociales. Todo esto para asegurarnos que tu propiedad llegue a la máxima cantidad de compradores potenciales.">
     
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':

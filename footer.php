@@ -59,10 +59,16 @@
                     <?php //echo do_shortcode( '[jr_instagram id="1"]', true ) ?>
                 </div>
             </div> -->
+            
 
         </div>
     </div>
     </footer>
+
+    <!--boton whatsapp-->
+    <a href="https://wa.me/523221804703?text=Hola+vengo+del+sitio+web" id="whatsapp" target="_blank" rel="noopener" aria-label="Contactar por whatsapp" title="Whatsapp"  data-bs-toggle="tooltip" data-bs-placement="top" class="border border-dark"> 
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
     <?php wp_footer(); ?>
 </body>

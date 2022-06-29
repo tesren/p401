@@ -38,6 +38,25 @@ ul{
     align-items: center;
 }
 
+.fs-0{
+    font-size: 7rem;
+}
+
+#whatsapp {
+    position: fixed;
+    z-index: 1000;
+    right: 25px;
+    bottom: 25px;
+    width: 60px;
+    height: 60px;
+    background-color: var(--black);
+    color: #fff !important;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 40px;
+    line-height: 1.5;
+}
+
 /* NAVBAR */
 header{
     top: 0;
@@ -239,7 +258,6 @@ header .logo{
 }
 .card-text{
     font-weight: 400;
-    font-size: 0.9rem;
 }
 
 /*CLIENTES*/
@@ -316,7 +334,7 @@ background: #B61D37;
     width: 100%;
     opacity: 0;
     transition: .5s ease;
-    background: linear-gradient(110.08deg, rgba(14,31,64,1) 0%, rgba(226,28,52,1) 100%);
+    background: linear-gradient(110.08deg, rgba(14,31,64,1) 0%, rgba(226,28,52,0.9) 100%);
 }
   
 .portafolio:hover .overlay {

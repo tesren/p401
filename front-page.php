@@ -273,7 +273,7 @@
 <div class="row align-items-center justify-content-center">
 
     <div class="col-12 col-lg-3 mb-5 text-center">
-        <a href="#" class="portafolio d-block text-decoration-none">
+        <a href="<?php echo get_post_type_archive_link( 'website' );?>" class="portafolio d-block text-decoration-none">
             <img src="<?php echo get_template_directory_uri() .'/assets/images/web-design.jpeg';?> " alt="Diseño web">
             <div class="overlay">
                 <h4 class="text">Diseño Web</h4>
