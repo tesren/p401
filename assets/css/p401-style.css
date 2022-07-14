@@ -324,6 +324,7 @@ background: #B61D37;
     width: 100%;
     height: auto;
 }
+
 .overlay {
     position: absolute;
     top: 0;
@@ -336,6 +337,26 @@ background: #B61D37;
     transition: .5s ease;
     background: linear-gradient(110.08deg, rgba(14,31,64,1) 0%, rgba(226,28,52,0.9) 100%);
 }
+
+.overlay-team {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+    opacity: 0.6;
+    transition: .5s ease;
+    background: linear-gradient(110.08deg, rgba(14,31,64,1) 0%, rgba(226,28,52,0.9) 100%);
+}
+.overlay-team:hover {
+    opacity: 0;
+    transition: .5s ease;
+}
+
+
   
 .portafolio:hover .overlay {
     opacity: 1;
@@ -471,6 +492,7 @@ footer p{
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 5;
 }
 .black-ball img{
     max-width: 55%;

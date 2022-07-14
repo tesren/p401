@@ -1,8 +1,13 @@
 <?php
     get_header();
+
+    $team_members = get_posts(array(
+        'post_type' => 'members',
+        'numberposts' => -1,
+    ));
 ?>
 
-<?php $hero = get_field('slider');?>
+
 <div class="bg-gradiant">
     <section style="min-height:100vh;">
 
@@ -24,19 +29,15 @@
 
             
             <div class="textBox">
-                <h1><?php echo $hero ['titulo'];?>
+                <h1>IMPULSANDO MARCAS
                     <img src="<?php echo get_template_directory_uri() .'/assets/images/text-decoration.svg';?>" alt="">
                 </h1>
-                <p><?php echo $hero ['descripcion'];?></p>
-
-                <?php if($hero['boton']):?>
-                   
-                    <a href="<?php echo $hero ['boton'];?>" class="btn btn-outline-light rounded-0 fs-3 px-5">
-                        <?php echo $hero ['titulo_del_boton'];?>
-                    </a>
-                  
-                <?php endif;?>
-
+                <p><?php echo get_the_content();?></p>
+         
+                <a href="#contacto" class="btn btn-outline-light rounded-0 fs-3 px-5">
+                    Comencemos
+                </a>
+                
             </div>
 
         </div>
@@ -100,47 +101,40 @@
 
 <h2 class="title401 text-center mt-5">Nuestro Equipo<img src="<?php echo get_template_directory_uri() .'/assets/images/decoration2.svg';?>" alt="" class="decoration2"></h2>
     
-<?php if(have_rows('equipo')): ?>
+
     <section class="splide px-0" aria-label="Nuestro Equipo" id="our_team">
         <div class="splide__track w-100">
             <ul class="splide__list">
 
-                <?php while(have_rows('equipo')): the_row();
-                    $foto = get_sub_field('foto');
-                    $foto_hover = get_sub_field('foto_hover');
-                    $icono = get_sub_field('icono');
-                    $cargo = get_sub_field('cargo');
-                    $nombre = get_sub_field('nombre');
-                    $titulo = get_sub_field('titulo');
-                ?>
+                <?php foreach($team_members as $member): ?>
                     
                     <li class="splide__slide">
                         <div class="box">
-                            <div class="slide-img portafolio">
+                            <div class="slide-img portafolio position-relative">
 
-                                <!-- <div class="black-ball"><img src="<?php echo $icono['url'];?>"></div> -->
-                                <img src="<?php echo $foto['url'];?>" alt="<?php echo $nombre; ?>" class="img-fluid image" loading="lazy">
-                                <div class="overlay">
-                                    <div class="black-ball"><img src="<?php echo $icono['url'];?>" alt=""></div>
-                                    <img src="<?php echo $foto_hover['url'];?>" alt="<?php echo $nombre; ?>" class="img-fluid image" loading="lazy">
-                                </div>
+                                <?php $profilepic = rwmb_meta('profile_pic', ['size'=>'full', 'limit'=>1], $member->ID ); ?>
+                                <?php $icon = rwmb_meta('icon', ['size'=>'full', 'limit'=>1], $member->ID ); ?>
+
+                                <img src="<?php echo $profilepic[0]['url'];?>" alt="<?php echo get_the_title($member->ID); ?>" class="img-fluid image" loading="lazy">
+                                <div class="overlay-team"></div>
+                                <div class="black-ball top-0 start-0"><img src="<?php echo $icon[0]['url'];?>" alt=""></div>
                                         
                             </div>
                         </div>
                         <div class="detail-box">
                             
-                            <div class="circle-title text-center"><?php echo $cargo; ?></div>
-                            <div class="white-text pt-2"><?php echo $nombre; ?></div>
+                            <div class="circle-title text-center"><?php echo $member->position; ?></div>
+                            <div class="white-text pt-2"><?php echo get_the_title($member->ID); ?></div>
 
                         </div>		
                     </li>
+                <?php endforeach; ?>
 
-                <?php endwhile;?>
             </ul>
         </div>
         
     </section>
-<?php endif; ?>
+
 
 
     <div id="servicios"></div>
@@ -267,7 +261,7 @@
 <div id="portafolio"></div>
 
 <!-- PORTAFOLIO -->
-<h3 class="title401 text-center mt-5 pb-5">Portafolio<img src="<?php echo get_template_directory_uri() .'/assets/images/decoration2.svg';?>" alt="" class="decoration2"></h3>
+<!-- <h3 class="title401 text-center mt-5 pb-5">Portafolio<img src="<?php echo get_template_directory_uri() .'/assets/images/decoration2.svg';?>" alt="" class="decoration2"></h3>
 
 
 <div class="row align-items-center justify-content-center">
@@ -308,7 +302,7 @@
         </a>
     </div>
     
-</div>
+</div> -->
 
 
 <!-- CLIENTES -->
@@ -374,91 +368,8 @@
 <!-- TESTIMONIOS -->
 <h4 class="title401 text-center my-5 pt-5">Testimonios<img src="<?php echo get_template_directory_uri() .'/assets/images/decoration2.svg';?>" alt="" class="decoration2"></h4>
 
-<div class="bd-example">
-    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators my-4">
-        </ol>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
+<?php echo do_shortcode( '[trustindex no-registration=google]', true )?>
 
-                <div class="row justify-content-center flex-column-reverse flex-sm-row">
-
-                 <!--    <div class="col-12 col-sm-6 p-0">
-                        <img src="<?php echo get_template_directory_uri() .'/assets/images/photoimg.webp';?>" class="img-fluid desaparecer" alt="photo">
-                    </div> -->
-                    
-                    <div class="col-11 col-lg-6 p-5">
-
-                        <div class="texto-container">
-                            <div class="d-flex">
-                                <img class="border-img" src="<?php echo get_template_directory_uri() .'/assets/images/img_avatar.webp';?>" alt="">
-                                <div class="ml-3">
-                                    <div class="text-white-bold">Naomi Zara</div>
-                                    <div class="white-text pb-2">Directora C21</div>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star white"></span>
-                                    <span class="fa fa-star white"></span>
-                                </div>
-                            </div>
-                            <div class="text-white mt-4">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ornare eget odio in rhoncus. Donec sed tellus tristique, venenatis magna eu, varius orci. Mauris a dapibus dui. Nulla id turpis est. Morbi interdum purus sed sollicitudin tempor. In hac habitasse platea.
-                            </div>
-                        </div>
-
-                    </div>
-
-                </div>
-                
-            </div>
-
-            <div class="carousel-item">
-                
-                <div class="row justify-content-center flex-column-reverse flex-sm-row">
-
-              <!--   <div class="col-12 col-sm-6 p-0">
-                        <img src="<?php echo get_template_directory_uri() .'/assets/images/photoimg.webp';?>" class="img-fluid desaparecer" alt="photo">
-                    </div> -->
-                    
-                    <div class="col-11 col-lg-6 p-5">
-
-                        <div class="texto-container">
-                            <div class="d-flex">
-                                <img class="border-img" src="<?php echo get_template_directory_uri() .'/assets/images/img_avatar.webp';?>" alt="">
-                                <div class="ml-3">
-                                    <div class="text-white-bold">Naomi Zara</div>
-                                    <div class="white-text pb-2">Directora C21</div>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star white"></span>
-                                    <span class="fa fa-star white"></span>
-                                </div>
-                            </div>
-                            <div class="text-white mt-4">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ornare eget odio in rhoncus. Donec sed tellus tristique, venenatis magna eu, varius orci. Mauris a dapibus dui. Nulla id turpis est. Morbi interdum purus sed sollicitudin tempor. In hac habitasse platea.
-                            </div>
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-            
-        </div>
-        <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-        </a>
-    </div>
-</div>
 <div id="contacto"></div>
 <!-- FORMULARIO -->
 <div class="full-view">
@@ -496,27 +407,6 @@
         </div>
     </div>
 </div>
-
-
-
-
-
-
-
-
-<?php
-    if( have_posts() ){
-
-        while( have_posts() ){
-
-        the_post();
-        the_content();
-
-        }
-    }
-
-?>
-
 
 
 <?php

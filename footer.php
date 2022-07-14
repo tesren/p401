@@ -19,13 +19,13 @@
 
                     <div class="d-flex text-center mt-2">
                     <a href="https://www.facebook.com/Punto401/" target="_blank" rel="noopener noreferrer" aria-label="Facebook de Punto401" class="fb_click">
-                        <i class="fab fa-facebook me-4 fa-lg"></i>
+                        <i class="fab fa-facebook me-4 fa-2x"></i>
                     </a>
                     <a href="https://www.instagram.com/punto401_marketing/" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Punto401" class="insta_click">
-                        <i class="fab fa-instagram me-4 fa-lg"></i>
+                        <i class="fab fa-instagram me-4 fa-2x"></i>
                     </a>
                     <a href="https://wa.link/khx8bl" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp de Punto401" class="wp_click">
-                        <i class="fab fa-whatsapp fa-lg"></i>
+                        <i class="fab fa-whatsapp fa-2x"></i>
                     </a>
                     </div>
                 </div>

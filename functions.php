@@ -86,7 +86,8 @@ function punto401_script_enqueue() {
 
     
     require get_template_directory() . '/inc/messages-cpt.php';
-    require get_template_directory() . '/inc/websites-cpt.php';
+    require get_template_directory() . '/inc/members-cpt.php';
+    //require get_template_directory() . '/inc/websites-cpt.php';
 
 
     function check_post_type_and_remove_media_buttons() {
