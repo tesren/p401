@@ -43,6 +43,16 @@
         <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=4727010297378212&ev=PageView&noscript=1"/>
     </noscript>
     <!-- End Facebook Pixel Code -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+
+    <link rel="preload" href="<?php echo get_template_directory_uri();?>/assets/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/assets/css/bootstrap.min.css"></noscript>
+
+    <link rel="preload" href="<?php echo get_template_directory_uri();?>/assets/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/assets/css/all.min.css"></noscript>
 
     <?php wp_head(); ?>
 </head>
