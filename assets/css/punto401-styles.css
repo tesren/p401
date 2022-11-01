@@ -14,7 +14,7 @@ body{
 section{
     position: relative;
     width: 100%;
-    padding: 90px;
+    padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -37,7 +37,7 @@ ul{
 }
 
 .fs-0{
-    font-size: 7rem;
+    font-size: 4.5rem;
 }
 
 #whatsapp {
@@ -112,32 +112,6 @@ header .logo{
   margin-bottom: 6rem;
 }
 
-/* 1ST SECTION */
-.content{
-    position: relative;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.content .textBox{
-    position: relative;
-    max-width: 45vw;
-    padding-left: 4vw;
-}
-.content .textBox h2, .content .textBox h1{
-    color: var(--white);
-    font-size: 4.5vw;
-    margin-bottom: 2vh;
-    font-weight: 200;
-}
-.content .textBox p{
-    color: #fff;
-    font-weight: 200;
-    font-size: 1.5vw;
-    margin: 0;
-    margin-bottom: 3vh;
-}
 .btn-p401{
     font-size: 1.7vw;
     border: 2px solid var(--white);
@@ -281,9 +255,31 @@ header .logo{
     right: 0;
     height: 100%;
     width: 100%;
-    opacity: 0;
+    z-index: 5;
+    opacity: 1;
     transition: .5s ease;
-    background: linear-gradient(110.08deg, rgba(14,31,64,1) 0%, rgba(226,28,52,0.9) 100%);
+    background: linear-gradient(111.84deg, #0E1F40 0.04%, #E21C34 99.43%);
+    mix-blend-mode: multiply;
+}
+
+.archive-element{
+    height:650px;
+    opacity: 0.7;
+    transition: 0.2s;
+}
+
+.archive-element:hover{
+    transition: 0.3s;
+    opacity: 1;
+}
+
+.fondo-oscuro{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
 .overlay-team {
@@ -616,6 +612,9 @@ footer p{
     }
 }
 @media (max-width: 540px){
+    .fs-0{
+        font-size: 3rem;
+    }
     header{
         padding: 30px 50px;
     }

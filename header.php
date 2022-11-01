@@ -8,6 +8,10 @@
     <meta name="description" content="Agencia de Marketing Digital especializada en Bienes Raíces, creamos recursos audiovisuales, sitios web, tu imagen corporativa y manejamos tus redes sociales. Todo esto para asegurarnos que tu propiedad llegue a la máxima cantidad de compradores potenciales.">
     <meta name="theme-color" content="#1a1a1a">
 
+    <?php if(!is_front_page()): ?>
+        <meta name="robots" content="noindex">
+    <?php endif; ?>
+
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -67,7 +71,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div id="inicio"></div>    
     <header>
         
-        <a href="/" aria-label="Punto401 Logo">
+        <a href="<?php echo get_home_url();?>" aria-label="Punto401 Logo">
             <?php 
                 $custom_logo_id = get_theme_mod( 'custom_logo' );
                 $image = wp_get_attachment_image_src( $custom_logo_id , 'full' );

@@ -9,9 +9,9 @@
 
 
 <div class="bg-gradiant">
-    <section style="min-height:100vh;">
+    <section class="row justify-content-evenly" style="min-height:100vh;">
 
-        <div class="content">
+        <div class="col-12 col-lg-5">
 
             <div id="carouselExampleSlidesOnly" class="carousel slide px-5 my-5 my-lg-0" data-bs-ride="carousel">
                 <div class="carousel-inner">
@@ -26,21 +26,22 @@
                     </div>
                 </div>
             </div>
-
-            
-            <div class="textBox">
-                <h1>IMPULSANDO MARCAS
-                    <img src="<?php echo get_template_directory_uri() .'/assets/images/text-decoration.svg';?>" alt="">
-                </h1>
-                <p><?php echo get_the_content();?></p>
-         
-                <a href="#contacto" class="btn btn-outline-light rounded-0 fs-3 px-5">
-                    Comencemos
-                </a>
-                
-            </div>
-
         </div>
+        
+        <div class="col-12 col-lg-5">
+            <h1 class="mb-3 mb-lg-4 fs-0" style="font-weight:200;">IMPULSANDO MARCAS
+                <img src="<?php echo get_template_directory_uri() .'/assets/images/text-decoration.svg';?>" alt="">
+            </h1>
+
+            <div class="fs-5 mb-3 mb-lg-4"><?php echo get_the_content();?></div>
+        
+            <a href="#contacto" class="btn btn-outline-light rounded-0 fs-3 px-5">
+                Comencemos
+            </a>
+            
+        </div>
+
+        
 
     </section>
 
@@ -260,48 +261,67 @@
 <div id="portafolio"></div>
 
 <!-- PORTAFOLIO -->
-<!-- <h3 class="title401 text-center mt-5 pb-5">Portafolio<img src="<?php echo get_template_directory_uri() .'/assets/images/decoration2.svg';?>" alt="" class="decoration2"></h3>
+<h3 class="title401 text-center mt-5 pb-5">Portafolio<img src="<?php echo get_template_directory_uri() .'/assets/images/decoration2.svg';?>" alt="" class="decoration2"></h3>
 
 
 <div class="row align-items-center justify-content-center">
 
-    <div class="col-12 col-lg-3 mb-5 text-center">
-        <a href="<?php echo get_post_type_archive_link( 'website' );?>" class="portafolio d-block text-decoration-none">
-            <img src="<?php echo get_template_directory_uri() .'/assets/images/web-design.jpeg';?> " alt="Diseño web">
-            <div class="overlay">
-                <h4 class="text">Diseño Web</h4>
+    <div class="col-12 col-lg-3 mb-5 px-0 mx-2 text-center position-relative">
+        <img class="w-100" src="<?php echo get_template_directory_uri() .'/assets/images/website.jpg';?> " alt="Imagen Corporativa">
+        <div class="overlay"></div>
+        <div class="row justify-content-center position-absolute w-100 h-100 start-0 top-0" style="z-index:10;">
+            <div class="col-12 align-self-center">
+                <h4>Sitios Web</h4>
+                <a href="<?php echo get_post_type_archive_link( 'website' );?>" class="btn btn-outline-light rounded-0">Ver más</a>
             </div>
-        </a>
+        </div>
     </div>
 
-    <div class="col-12 col-lg-3 mb-5 text-center">
-        <a href="#" class="portafolio d-block text-decoration-none">
-            <img src="<?php echo get_template_directory_uri() .'/assets/images/imagen-corp.jpeg';?> " alt="Imagen Corporativa">
-            <div class="overlay">
-                <h4 class="text">Imagen Corporativa</h4>
+    <div class="col-12 col-lg-3 mb-5 px-0 mx-2 text-center position-relative">
+        <img class="w-100" src="<?php echo get_template_directory_uri() .'/assets/images/foto.jpg';?> " alt="Imagen Corporativa">
+        <div class="overlay"></div>
+        <div class="row justify-content-center position-absolute w-100 h-100 start-0 top-0" style="z-index:10;">
+            <div class="col-12 align-self-center">
+                <h4>Fotografía</h4>
+                <a href="#" class="btn btn-outline-light rounded-0 px-4">Ver más</a>
             </div>
-        </a>
+        </div>
     </div>
 
-    <div class="col-12 col-lg-3 mb-5 text-center">
-        <a href="#" class="portafolio d-block text-decoration-none">
-            <img src="<?php echo get_template_directory_uri() .'/assets/images/fotoyvideo.jpg';?> " alt="Fotografía y video">
-            <div class="overlay">
-                <h4 class="text">Fotografía y video</h4>
+    <div class="col-12 col-lg-3 mb-5 px-0 mx-2 text-center position-relative">
+        <img class="w-100" src="<?php echo get_template_directory_uri() .'/assets/images/video.jpg';?> " alt="Imagen Corporativa">
+        <div class="overlay"></div>
+        <div class="row justify-content-center position-absolute w-100 h-100 start-0 top-0" style="z-index:10;">
+            <div class="col-12 align-self-center">
+                <h4>Video</h4>
+                <a href="#" class="btn btn-outline-light rounded-0 px-4">Ver más</a>
             </div>
-        </a>
+        </div>
     </div>
 
-    <div class="col-12 col-lg-3 mb-5 text-center">
-        <a href="#" class="portafolio d-block text-decoration-none">
-            <img src="<?php echo get_template_directory_uri() .'/assets/images/social-media.jpeg';?> " alt="Manejo de Redes sociales">
-            <div class="overlay">
-                <h4 class="text">Redes Sociales</h4>
+    <div class="col-12 col-lg-3 mb-5 px-0 mx-2 text-center position-relative">
+        <img class="w-100" src="<?php echo get_template_directory_uri() .'/assets/images/design.jpg';?> " alt="Imagen Corporativa">
+        <div class="overlay"></div>
+        <div class="row justify-content-center position-absolute w-100 h-100 start-0 top-0" style="z-index:10;">
+            <div class="col-12 align-self-center">
+                <h4>Diseño gráfico</h4>
+                <a href="#" class="btn btn-outline-light rounded-0 px-4">Ver más</a>
             </div>
-        </a>
+        </div>
+    </div>
+
+    <div class="col-12 col-lg-3 mb-5 px-0 mx-1 text-center position-relative">
+        <img class="w-100" src="<?php echo get_template_directory_uri() .'/assets/images/marketing.jpg';?> " alt="Imagen Corporativa">
+        <div class="overlay"></div>
+        <div class="row justify-content-center position-absolute w-100 h-100 start-0 top-0" style="z-index:10;">
+            <div class="col-12 align-self-center">
+                <h4>Marketing</h4>
+                <a href="#" class="btn btn-outline-light rounded-0 px-4">Ver más</a>
+            </div>
+        </div>
     </div>
     
-</div> -->
+</div> 
 
 
 <!-- CLIENTES -->

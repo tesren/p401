@@ -62,7 +62,7 @@ function punto401_script_enqueue() {
     //wp_enqueue_style( 'bootstrap-css-preload', get_template_directory_uri() .'/assets/css/bootstrap.min.css' );
     wp_enqueue_style( 'splide-css', get_template_directory_uri() .'/assets/css/splide.min.css' );
     //wp_enqueue_style('font_awesome-preload', get_template_directory_uri() . '/assets/css/all.min.css', array(), '6.1.1', 'all');
-    wp_enqueue_style('customstyle', get_template_directory_uri() . '/assets/css/p401-style.css', array(), '1.0.0', 'all');
+    wp_enqueue_style('customstyle', get_template_directory_uri() . '/assets/css/punto401-styles.css', array(), '1.0.0', 'all');
 
 
     wp_enqueue_script( 'jqeury-defer', get_template_directory_uri().'/assets/js/jquery-3.6.0.min.js' );
@@ -108,7 +108,7 @@ function punto401_script_enqueue() {
     
     require get_template_directory() . '/inc/messages-cpt.php';
     require get_template_directory() . '/inc/members-cpt.php';
-    //require get_template_directory() . '/inc/websites-cpt.php';
+    require get_template_directory() . '/inc/websites-cpt.php';
 
 
     function check_post_type_and_remove_media_buttons() {
