@@ -5,12 +5,12 @@
         <?php while( have_posts() ): the_post();?>
 
             <?php 
-                $websites = get_posts(array(
-                    'post_type' => 'website',
+                $photos = get_posts(array(
+                    'post_type' => 'photos',
                     'numberposts' => 4,
                     'exclude'=> get_the_ID(),
                 ));
-                $imagesFull = rwmb_meta('images', ['size'=>'full', 'limit'=>8]);
+                $imagesFull = rwmb_meta('images', ['size'=>'full', 'limit'=>14]);
                 //$imagesMed = rwmb_meta('images', ['size'=>'medium', 'limit'=>4]); 
             ?>
 
@@ -19,7 +19,7 @@
                 <img src="<?php echo $imagesFull[0]['url']; ?>" alt="<?php echo the_title(); ?>" class="w-100">
                 <div class="row justify-content-center position-absolute top-0 start-0 w-100 h-100">
                     <div class="col-12 text-center align-self-center">
-                        <h1 class="fs-0 fw-light">SITIO WEB</h1>
+                        <h1 class="fs-0 fw-light text-uppercase">Fotografía</h1>
                         <hr class="text-white col-8 col-lg-4 mx-auto" style=" opacity:1;">
                         <h2 class="fs-0 fw-light text-uppercase"><?php echo get_the_title(); ?></h2>
                     </div>    
@@ -46,7 +46,7 @@
                 </div>
             </div>
 
-            <h3 class="fs-1 text-uppercase text-center fw-light my-5">Date a conocer en el <br> mundo digital</h3>
+            <h3 class="fs-1 text-uppercase text-center fw-light my-5">Creamos los recursos visuales ideales para ti.</h3>
 
             <div class="container">
                 <div class="row w-100">
@@ -68,38 +68,54 @@
 
                 </div>
 
-                <div class="row w-100 mb-3" style="background:#9A9899;">
-                    <div class="col-12 col-lg-7 px-0">
-                        <img src="<?php echo $imagesFull[5]['url']; ?>" alt="<?php echo $imagesFull[5]['title']; ?>" class="w-100" style="height:600px; object-fit:cover;">
+                <div class="row w-100 mb-3 mb-lg-0" >
+                    <div class="col-12 col-lg-7 ps-0 pe-0 pe-lg-3 mb-3">
+                        <img src="<?php echo $imagesFull[5]['url']; ?>" alt="<?php echo $imagesFull[5]['title']; ?>" class="w-100" style="height:617px; object-fit:cover;">
                     </div>
 
                     <div class="col-12 col-lg-5 px-0 text-center" >
-                        <img src="<?php echo $imagesFull[6]['url']; ?>" alt="<?php echo $imagesFull[6]['title']; ?>" class="w-100 mb-4">
-                        <h3 class="fs-1 fw-light text-uppercase">Visita el sitio web</h3>
-                        <a href="<?php echo rwmb_meta('link'); ?>" class="btn btn-outline-light rounded-0 mb-5" target="_blank" rel="noopener noreferrer">Visitar</a>
+                        <img src="<?php echo $imagesFull[6]['url']; ?>" alt="<?php echo $imagesFull[6]['title']; ?>" class="w-100 mb-3" style="height:300px; object-fit:cover;">
+                        <img src="<?php echo $imagesFull[7]['url']; ?>" alt="<?php echo $imagesFull[7]['title']; ?>" class="w-100" style="height:300px; object-fit:cover;">
                     </div>
-
                 </div>
 
                 <div class="row w-100">
-                    <div class="col-12 px-0">
-                        <img src="<?php echo $imagesFull[7]['url']; ?>" alt="<?php echo $imagesFull[7]['title']; ?>" class="w-100">
+                    <div class="col-12 px-0 mb-3">
+                        <img src="<?php echo $imagesFull[8]['url']; ?>" alt="<?php echo $imagesFull[8]['title']; ?>" class="w-100">
+                    </div>
+
+                    <div class="col-12 col-lg-6 pe-0 pe-lg-3 ps-0 mb-3">
+                        <img src="<?php echo $imagesFull[9]['url']; ?>" alt="<?php echo $imagesFull[9]['title']; ?>" class="w-100" style="height:617px; object-fit:cover;">
+                    </div>
+                    <div class="col-12 col-lg-6 px-0 mb-3">
+                        <img src="<?php echo $imagesFull[10]['url']; ?>" alt="<?php echo $imagesFull[10]['title']; ?>" class="w-100" style="height:617px; object-fit:cover;">
+                    </div>
+
+                    <div class="col-12 px-0 mb-3">
+                        <img src="<?php echo $imagesFull[11]['url']; ?>" alt="<?php echo $imagesFull[11]['title']; ?>" class="w-100">
+                    </div>
+
+                    <div class="col-12 col-lg-5 pe-0 pe-lg-3 ps-0 mb-3">
+                        <img src="<?php echo $imagesFull[12]['url']; ?>" alt="<?php echo $imagesFull[12]['title']; ?>" class="w-100" style="height:617px; object-fit:cover;">
+                    </div>
+                    <div class="col-12 col-lg-7 px-0 mb-3">
+                        <img src="<?php echo $imagesFull[13]['url']; ?>" alt="<?php echo $imagesFull[13]['title']; ?>" class="w-100" style="height:617px; object-fit:cover;">
                     </div>
                 </div>
             </div>
             
 
-            <h4 class="fs-1 fw-light text-uppercase text-center my-5 pt-5">Otros sitios web</h4>
+            <h4 class="fs-1 fw-light text-uppercase text-center my-5 pt-5">Otros portafolios de fotografía</h4>
             <div class="row justify-content-center mb-5" >
-                <?php foreach($websites as $web):?>
+                <?php foreach($photos as $photo):?>
 
                     <div class="col-12 col-lg-3 mx-2 mb-4 position-relative archive-element">
-                        <a href="<?php echo get_the_permalink($web->ID);?>" class="w-100 h-100 text-decoration-none">
-                            <?php $logoArray = rwmb_meta('logo', ['size'=>'full', 'limit'=>1], $web->ID) ?>
+                        <a href="<?php echo get_the_permalink($photo->ID);?>" class="w-100 h-100 text-decoration-none">
+                            <?php $logoArray = rwmb_meta('logo', ['size'=>'full', 'limit'=>1], $photo->ID) ?>
 
-                            <div class="row justify-content-center position-absolute top-0 start-0 h-100 w-100" style="background-color:<?php echo $web->background_color; ?>;">
+                            <div class="row justify-content-center position-absolute top-0 start-0 h-100 w-100" style="background-color:<?php echo $photo->background_color; ?>;">
                                 <div class="col-12 align-self-center">
-                                    <img class="w-100 px-5" src="<?php echo $logoArray[0]['url']; ?>" alt="<?php echo get_the_title($web->ID);?>">
+                                    <img class="w-100 px-5" src="<?php echo $logoArray[0]['url']; ?>" alt="<?php echo get_the_title($photo->ID);?>">
                                 </div>
                             </div>
 

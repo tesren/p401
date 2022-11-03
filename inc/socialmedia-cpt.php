@@ -1,24 +1,24 @@
 <?php
-add_action( 'init', 'websites_register_post_type' );
+add_action( 'init', 'social_register_post_type' );
 
-function websites_register_post_type(){
+function social_register_post_type(){
 
     $labels = array(
-        'menu_name'          =>  'Websites' ,
-        'name_admin_bar'     =>  'Website' ,
-        'add_new'            =>  'Agregar Website' ,
-        'add_new_item'       =>  'Agregar Website' ,
-        'new_item'           =>  'Nuevo Website' ,
-        'edit_item'          =>  'Editar Website' ,
-        'view_item'          =>  'Ver Website' ,
-        'update_item'        =>  'Actualizar Website' ,
-        'all_items'          =>  'Todos los Websites' ,
-        'search_items'       =>  'Buscar Websites' ,
-        'parent_item_colon'  =>  'Padre Website' ,
-        'not_found'          =>  'No se encontraron Websites' ,
-        'not_found_in_trash' =>  'No hay websites en la papelera' ,
-        'name'               =>  'Websites' ,
-        'singular_name'      =>  'Website' ,
+        'menu_name'          =>  'Redes Sociales' ,
+        'name_admin_bar'     =>  'Redes Sociales' ,
+        'add_new'            =>  'Agregar Proyecto de Redes' ,
+        'add_new_item'       =>  'Agregar Proyecto de Redes' ,
+        'new_item'           =>  'Nuevo Proyecto de Redes' ,
+        'edit_item'          =>  'Editar Proyecto de Redes' ,
+        'view_item'          =>  'Ver Proyecto de Redes' ,
+        'update_item'        =>  'Actualizar Proyecto de Redes' ,
+        'all_items'          =>  'Todos los Proyectos de Redes' ,
+        'search_items'       =>  'Buscar Proyectos de Redes' ,
+        'parent_item_colon'  =>  'Padre Redes' ,
+        'not_found'          =>  'No se encontraron Proyectos de Redes' ,
+        'not_found_in_trash' =>  'No hay Proyectos de Redes en la papelera' ,
+        'name'               =>  'Redes Sociales' ,
+        'singular_name'      =>  'Redes Sociales' ,
 
     );
 
@@ -39,30 +39,30 @@ function websites_register_post_type(){
             'revisions',
         ),
         //'taxonomies' => array('category', 'post_tag'),
-        'menu_icon' => 'dashicons-html',
+        'menu_icon' => 'dashicons-admin-site-alt3',
         'menu_positions' => 7,
         'exclude_from_search' => false
 
     );
 
-    register_post_type('website', $args);
+    register_post_type('social', $args);
 
 }
 
-add_action('init', 'websites_register_post_type');
+add_action('init', 'social_register_post_type');
 
-add_filter( 'rwmb_meta_boxes', 'websites_register_meta_boxes' );
+add_filter( 'rwmb_meta_boxes', 'social_register_meta_boxes' );
 
-function websites_register_meta_boxes( $meta_boxes ) {
+function social_register_meta_boxes( $meta_boxes ) {
 
     $meta_boxes[] = [
-        'title'   => 'Info del Website' ,
-        'post_types' => 'website',
+        'title'   => 'Info del proyecto de Foto' ,
+        'post_types' => 'social',
         
         'fields'  => [
             [
                 'id'               => 'logo',
-                'name'             => 'Logo del sitio web',
+                'name'             => 'Logo de la empresa',
                 'type'             => 'image_advanced',
                 'force_delete'     => false,
                 'max_file_uploads' => 1,
@@ -77,12 +77,6 @@ function websites_register_meta_boxes( $meta_boxes ) {
                 'alpha_channel' => true,
             ],
             [
-                'type'          =>   'text',
-                'name'          =>   'Enlace del sitio web',
-                'id'            =>   'link',
-                'placeholder'   =>   'www.example.com',
-            ],
-            [
                 'type'          =>   'number',
                 'name'          =>   'Año',
                 'id'            =>   'year',
@@ -95,7 +89,7 @@ function websites_register_meta_boxes( $meta_boxes ) {
                 'name'             => 'Imagenes',
                 'type'             => 'image_advanced',
                 'force_delete'     => false,
-                'max_file_uploads' => 8,
+                'max_file_uploads' => 9,
                 'max_status'       => false,
                 'image_size'       => 'thumbnail',
             ],

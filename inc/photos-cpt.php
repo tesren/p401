@@ -17,7 +17,7 @@ function photos_register_post_type(){
         'parent_item_colon'  =>  'Padre Fotografía' ,
         'not_found'          =>  'No se encontraron Proyectos de Fotografías' ,
         'not_found_in_trash' =>  'No hay Proyectos de Foto en la papelera' ,
-        'name'               =>  'Proyectos de Fotografía' ,
+        'name'               =>  'Fotografía' ,
         'singular_name'      =>  'Fotografía' ,
 
     );
@@ -62,7 +62,7 @@ function photos_register_meta_boxes( $meta_boxes ) {
         'fields'  => [
             [
                 'id'               => 'logo',
-                'name'             => 'Logo del sitio web',
+                'name'             => 'Logo de la empresa',
                 'type'             => 'image_advanced',
                 'force_delete'     => false,
                 'max_file_uploads' => 1,
@@ -89,7 +89,7 @@ function photos_register_meta_boxes( $meta_boxes ) {
                 'name'             => 'Imagenes',
                 'type'             => 'image_advanced',
                 'force_delete'     => false,
-                'max_file_uploads' => 8,
+                'max_file_uploads' => 14,
                 'max_status'       => false,
                 'image_size'       => 'thumbnail',
             ],

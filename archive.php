@@ -38,6 +38,19 @@
 
         <?php endwhile;?>
     </div>
+
+<?php else:?>
+    <div class="bg-gradiant position-relative" style="padding-top:155px;">
+        <h1 class="fs-1 text-center text-uppercase mb-4" style="font-weight:200;">
+            Por el momento no hay nada, regresa mas tarde!
+        </h1>
+
+        <div style="height: 100px; overflow: hidden;" >
+            <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M0.00,49.98 C194.13,200.81 299.09,-104.11 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #1a1a1a;"></path>
+            </svg>
+        </div>
+
+    </div>
 <?php endif;?>
 
 

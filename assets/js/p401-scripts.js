@@ -59,3 +59,24 @@ $(document).ready( function () {
 
 /**Contact form */
 $('.wpcf7 textarea').attr('rows', 5);
+
+function copyLink() {
+    /* Get the text field */
+    var copyText = document.getElementById("current_link");
+    var copyBtn = document.getElementById("copiar-btn");
+    /* Select the text field */
+    copyText.select();
+    copyText.setSelectionRange(0, 99999); /* For mobile devices */
+  
+     /* Copy the text inside the text field */
+    navigator.clipboard.writeText(copyText.value);
+  
+    var oldTooltip = bootstrap.Tooltip.getInstance(copyBtn);
+    oldTooltip.hide();
+  
+    /* Alert the copied text */
+    copyBtn.setAttribute("title", "Copiado");
+  
+    var tooltip = new bootstrap.Tooltip(copyBtn);
+    tooltip.show()
+  }
