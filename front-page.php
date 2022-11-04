@@ -366,7 +366,7 @@
             <li class="splide__slide p-4">
                 <div class="red-shadow">
                     <div style="height: 150px;" class="card401 p-4">
-                        <img src="<?php echo get_template_directory_uri() .'/assets/images/remax.svg';?>" alt="Remax Playa la Cruz" class="imginbox401">
+                        <img src="<?php echo get_template_directory_uri() .'/assets/images/laguna-logo-dorado.png';?>" alt="Laguna Living" class="imginbox401">
                     </div>
                 </div>
             </li>
@@ -374,7 +374,7 @@
             <li class="splide__slide p-4">
                 <div class="red-shadow">
                     <div style="height: 150px;" class="card401 p-4">
-                        <img src="<?php echo get_template_directory_uri() .'/assets/images/one.svg';?>" alt="One Real Estate" class="imginbox401">
+                        <img src="<?php echo get_template_directory_uri() .'/assets/images/logogw.png';?>" alt="G&W Inmobiliaria" class="imginbox401">
                     </div>
                 </div>
             </li>

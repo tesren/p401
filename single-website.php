@@ -16,7 +16,7 @@
 
             <div class="position-relative">
                 <div class="fondo-oscuro"></div>
-                <img src="<?php echo $imagesFull[0]['url']; ?>" alt="<?php echo the_title(); ?>" class="w-100">
+                <img src="<?php echo $imagesFull[0]['url']; ?>" alt="<?php echo the_title(); ?>" class="w-100" style="height:97vh; object-fit:cover;">
                 <div class="row justify-content-center position-absolute top-0 start-0 w-100 h-100">
                     <div class="col-12 text-center align-self-center">
                         <h1 class="fs-0 fw-light">SITIO WEB</h1>
@@ -70,7 +70,7 @@
 
                 <div class="row w-100 mb-3" style="background:#9A9899;">
                     <div class="col-12 col-lg-7 px-0">
-                        <img src="<?php echo $imagesFull[5]['url']; ?>" alt="<?php echo $imagesFull[5]['title']; ?>" class="w-100" style="height:600px; object-fit:cover;">
+                        <img src="<?php echo $imagesFull[5]['url']; ?>" alt="<?php echo $imagesFull[5]['title']; ?>" class="w-100">
                     </div>
 
                     <div class="col-12 col-lg-5 px-0 text-center" >
@@ -81,11 +81,14 @@
 
                 </div>
 
-                <div class="row w-100">
-                    <div class="col-12 px-0">
-                        <img src="<?php echo $imagesFull[7]['url']; ?>" alt="<?php echo $imagesFull[7]['title']; ?>" class="w-100">
+                <?php if(isset($imagesFull[7]['url'])): ?>
+                    <div class="row w-100">
+                        <div class="col-12 px-0">
+                            <img src="<?php echo $imagesFull[7]['url']; ?>" alt="<?php echo $imagesFull[7]['title']; ?>" class="w-100">
+                        </div>
                     </div>
-                </div>
+                <?php endif; ?>
+
             </div>
             
 

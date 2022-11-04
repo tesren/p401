@@ -90,7 +90,7 @@ function design_register_meta_boxes( $meta_boxes ) {
                 'type'             => 'image_advanced',
                 'force_delete'     => false,
                 'max_file_uploads' => 11,
-                'max_status'       => false,
+                'max_status'       => true,
                 'image_size'       => 'thumbnail',
             ],
         ],

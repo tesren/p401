@@ -70,7 +70,7 @@ header{
     
 }
 header.sticky{
-    z-index: 100000;
+    z-index: 100;
     padding: 5px 100px;
     background: linear-gradient(110.08deg, rgba(14,31,64,1) 0%, rgba(226,28,52,1) 100%);
 }

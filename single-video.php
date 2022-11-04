@@ -65,7 +65,7 @@
                 <div class="row justify-content-center w-100 mb-3 mb-lg-0" >
                     
                     <?php foreach ( $vertical_videos as $video ) : ?>
-                        <div class="col-12 col-lg-4 px-0 pb-3 mb-5">
+                        <div class="col-12 col-lg-4 pb-3 mb-5">
                             <video class="w-100 d-block" src="<?php echo $video['src']; ?>" controls></video>
                             <p class="fs-5 fw-light mt-3"><?php echo $video['description']; ?></p>
                         </div>

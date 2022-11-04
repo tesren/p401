@@ -16,7 +16,7 @@
 
             <div class="position-relative">
                 <div class="fondo-oscuro"></div>
-                <img src="<?php echo $imagesFull[0]['url']; ?>" alt="<?php echo the_title(); ?>" class="w-100">
+                <img src="<?php echo $imagesFull[0]['url']; ?>" alt="<?php echo the_title(); ?>" class="w-100" style="height:97vh; object-fit:cover;">
                 <div class="row justify-content-center position-absolute top-0 start-0 w-100 h-100">
                     <div class="col-12 text-center align-self-center">
                         <h1 class="fs-0 fw-light text-uppercase">Redes Sociales</h1>
@@ -32,7 +32,7 @@
 
                 <div class="row w-100 mb-5">
                     <div class="col-12 col-lg-6 align-self-center text-center mb-5 mb-lg-0">
-                        <img class="col-10 col-lg-6 mx-auto px-0 px-lg-5" src="<?php echo $logoArray[0]['url']; ?>" alt="<?php echo get_the_title();?>">
+                        <img class="col-10 col-lg-6 mx-auto px-0 px-lg-5" src="<?php echo $logoArray[0]['url']; ?>" alt="<?php echo get_the_title();?>" >
                     </div>
                     <div class="col-12 col-lg-6">
                         <h2 class="text-uppercase">Información del proyecto</h2>
@@ -53,11 +53,11 @@
                 <div class="row w-100">
                     
                     <div class="col-12 col-lg-8 ps-0 pe-0 pe-lg-3 pb-3">
-                        <img src="<?php echo $imagesFull[1]['url']; ?>" alt="<?php echo $imagesFull[1]['title']; ?>" class="w-100" style="height:500px; object-fit:cover;">
+                        <img src="<?php echo $imagesFull[1]['url']; ?>" alt="<?php echo $imagesFull[1]['title']; ?>" class="w-100" style="height:650px; object-fit:cover;">
                     </div>
 
                     <div class="col-12 col-lg-4 px-0 pb-3">
-                        <img src="<?php echo $imagesFull[2]['url']; ?>" alt="<?php echo $imagesFull[2]['title']; ?>" class="w-100" style="height:500px; object-fit:cover;">
+                        <img src="<?php echo $imagesFull[2]['url']; ?>" alt="<?php echo $imagesFull[2]['title']; ?>" class="w-100" style="height:650px; object-fit:cover;">
                     </div>
 
                     <div class="col-12 px-0 pb-3">

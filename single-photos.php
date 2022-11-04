@@ -16,7 +16,7 @@
 
             <div class="position-relative">
                 <div class="fondo-oscuro"></div>
-                <img src="<?php echo $imagesFull[0]['url']; ?>" alt="<?php echo the_title(); ?>" class="w-100">
+                <img src="<?php echo $imagesFull[0]['url']; ?>" alt="<?php echo the_title(); ?>" class="w-100" style="height:97vh; object-fit:cover;">
                 <div class="row justify-content-center position-absolute top-0 start-0 w-100 h-100">
                     <div class="col-12 text-center align-self-center">
                         <h1 class="fs-0 fw-light text-uppercase">Fotografía</h1>
@@ -31,7 +31,7 @@
 
                 <div class="row w-100 mb-5">
                     <div class="col-12 col-lg-6 align-self-center text-center mb-5 mb-lg-0">
-                        <img class="col-10 col-lg-6 mx-auto px-0 px-lg-5" src="<?php echo $logoArray[0]['url']; ?>" alt="<?php echo get_the_title();?>">
+                        <img class="col-10 col-lg-6 mx-auto px-0 px-lg-5" src="<?php echo $logoArray[0]['url']; ?>" alt="<?php echo get_the_title();?>" >
                     </div>
                     <div class="col-12 col-lg-6">
                         <h2 class="text-uppercase">Información del proyecto</h2>
@@ -50,58 +50,15 @@
 
             <div class="container">
                 <div class="row w-100">
-                    <div class="col-12 px-0 pb-3">
-                        <img src="<?php echo $imagesFull[1]['url']; ?>" alt="<?php echo $imagesFull[1]['title']; ?>" class="w-100">
-                    </div>
-                    
-                    <div class="col-12 col-lg-8 ps-0 pe-0 pe-lg-3 pb-3">
-                        <img src="<?php echo $imagesFull[2]['url']; ?>" alt="<?php echo $imagesFull[2]['title']; ?>" class="w-100" style="height:500px; object-fit:cover;">
-                    </div>
 
-                    <div class="col-12 col-lg-4 px-0 pb-3">
-                        <img src="<?php echo $imagesFull[3]['url']; ?>" alt="<?php echo $imagesFull[3]['title']; ?>" class="w-100" style="height:500px; object-fit:cover;">
-                    </div>
-
-                    <div class="col-12 px-0 pb-3">
-                        <img src="<?php echo $imagesFull[4]['url']; ?>" alt="<?php echo $imagesFull[4]['title']; ?>" class="w-100">
-                    </div>
+                    <?php foreach($imagesFull as $img): ?>
+                        <div class="col-6 col-lg-4 col-xl-3 p-2">
+                            <img src="<?php echo $img['url']; ?>" alt="<?php echo $img['title']; ?>" class="w-100 rounded-2" data-fancybox="gallery" style="height:300px; object-fit:cover;">
+                        </div>
+                    <?php endforeach; ?>
 
                 </div>
 
-                <div class="row w-100 mb-3 mb-lg-0" >
-                    <div class="col-12 col-lg-7 ps-0 pe-0 pe-lg-3 mb-3">
-                        <img src="<?php echo $imagesFull[5]['url']; ?>" alt="<?php echo $imagesFull[5]['title']; ?>" class="w-100" style="height:617px; object-fit:cover;">
-                    </div>
-
-                    <div class="col-12 col-lg-5 px-0 text-center" >
-                        <img src="<?php echo $imagesFull[6]['url']; ?>" alt="<?php echo $imagesFull[6]['title']; ?>" class="w-100 mb-3" style="height:300px; object-fit:cover;">
-                        <img src="<?php echo $imagesFull[7]['url']; ?>" alt="<?php echo $imagesFull[7]['title']; ?>" class="w-100" style="height:300px; object-fit:cover;">
-                    </div>
-                </div>
-
-                <div class="row w-100">
-                    <div class="col-12 px-0 mb-3">
-                        <img src="<?php echo $imagesFull[8]['url']; ?>" alt="<?php echo $imagesFull[8]['title']; ?>" class="w-100">
-                    </div>
-
-                    <div class="col-12 col-lg-6 pe-0 pe-lg-3 ps-0 mb-3">
-                        <img src="<?php echo $imagesFull[9]['url']; ?>" alt="<?php echo $imagesFull[9]['title']; ?>" class="w-100" style="height:617px; object-fit:cover;">
-                    </div>
-                    <div class="col-12 col-lg-6 px-0 mb-3">
-                        <img src="<?php echo $imagesFull[10]['url']; ?>" alt="<?php echo $imagesFull[10]['title']; ?>" class="w-100" style="height:617px; object-fit:cover;">
-                    </div>
-
-                    <div class="col-12 px-0 mb-3">
-                        <img src="<?php echo $imagesFull[11]['url']; ?>" alt="<?php echo $imagesFull[11]['title']; ?>" class="w-100">
-                    </div>
-
-                    <div class="col-12 col-lg-5 pe-0 pe-lg-3 ps-0 mb-3">
-                        <img src="<?php echo $imagesFull[12]['url']; ?>" alt="<?php echo $imagesFull[12]['title']; ?>" class="w-100" style="height:617px; object-fit:cover;">
-                    </div>
-                    <div class="col-12 col-lg-7 px-0 mb-3">
-                        <img src="<?php echo $imagesFull[13]['url']; ?>" alt="<?php echo $imagesFull[13]['title']; ?>" class="w-100" style="height:617px; object-fit:cover;">
-                    </div>
-                </div>
             </div>
             
 
