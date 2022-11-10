@@ -30,13 +30,17 @@
                 <?php $logoArray = rwmb_meta('logo', ['size'=>'full', 'limit'=>1]) ?>
 
                 <div class="row w-100 mb-5">
-                    <div class="col-12 col-lg-6 align-self-center text-center mb-5 mb-lg-0">
-                        <img class="col-10 col-lg-6 mx-auto px-0 px-lg-5" src="<?php echo $logoArray[0]['url']; ?>" alt="<?php echo get_the_title();?>" >
-                    </div>
-                    <div class="col-12 col-lg-6">
+                    <?php if(count($logoArray) > 0): ?>
+                        <div class="col-12 col-lg-6 align-self-center text-center mb-5 mb-lg-0">
+                            <img class="col-10 col-lg-6 mx-auto px-0 px-lg-5" src="<?php echo $logoArray[0]['url']; ?>" alt="<?php echo get_the_title();?>" >
+                        </div>
+                    <?php endif; ?>
+
+                    <div class="col-12 col-lg-6 px-3 px-lg-5">
                         <h2 class="text-uppercase">Información del proyecto</h2>
                         <div class="fw-light"><?php echo the_content(); ?></div>
                         <div>Año: <?php echo rwmb_meta('year'); ?></div>
+                        <div>Categoría: <?php echo p401_get_photo_category(get_the_ID(), 'category-photos'); ?></div>
                     </div>
                 </div>
 
@@ -65,19 +69,43 @@
             <h4 class="fs-1 fw-light text-uppercase text-center my-5 pt-5">Otros portafolios de fotografía</h4>
             <div class="row justify-content-center mb-5" >
                 <?php foreach($photos as $photo):?>
+                    <?php $logoArray = rwmb_meta('logo', ['size'=>'full', 'limit'=>1], $photo->ID) ?>
 
-                    <div class="col-12 col-lg-3 mx-2 mb-4 position-relative archive-element">
-                        <a href="<?php echo get_the_permalink($photo->ID);?>" class="w-100 h-100 text-decoration-none">
-                            <?php $logoArray = rwmb_meta('logo', ['size'=>'full', 'limit'=>1], $photo->ID) ?>
-
-                            <div class="row justify-content-center position-absolute top-0 start-0 h-100 w-100" style="background-color:<?php echo $photo->background_color; ?>;">
-                                <div class="col-12 align-self-center">
-                                    <img class="w-100 px-5" src="<?php echo $logoArray[0]['url']; ?>" alt="<?php echo get_the_title($photo->ID);?>">
+                    <?php if(count($logoArray) == 1): ?>
+                
+                        <div class="col-12 col-lg-3 mx-2 mb-4 px-0 position-relative archive-element">
+                            <a href="<?php echo get_the_permalink($photo->ID);?>" class="w-100 h-100 text-decoration-none">
+                                <div class="row justify-content-center position-absolute top-0 start-0 h-100 w-100" style="background-color:<?php echo rwmb_meta('background_color', [], $photo->ID)?>;">
+                                    <div class="col-12 align-self-center">
+                                        <img class="w-100 px-5" src="<?php echo $logoArray[0]['url']; ?>" alt="<?php echo get_the_title($photo->ID);?>">
+                                    </div>
                                 </div>
-                            </div>
+                                <div class="position-absolute bottom-0 start-0 text-center link-light w-100" style="z-index:100;">
+                                    <?php echo p401_get_photo_category($photo->ID, 'category-photos'); ?>
+                                </div>
+                            </a>
+                        </div>
 
-                        </a>
-                    </div>
+                    <?php else: ?>
+                        <div class="col-12 col-lg-3 mx-2 mb-4 position-relative px-0 thumbnail-element">
+                            <a href="<?php echo get_the_permalink($photo->ID);?>" class="w-100 h-100 text-decoration-none">
+                                <?php $images = rwmb_meta('images', ['size'=>'full', 'limit'=>14], $photo->ID);?>
+
+                                <img class="w-100" src="<?php echo $images[0]['url']; ?>" alt="<?php echo get_the_title($photo->ID);?>" style="height:650px; object-fit:cover;">
+                                <div class="row justify-content-center position-absolute top-0 start-0 h-100 w-100" style="z-index:100;">
+                                    <div class="col-12 align-self-center text-center">
+                                        <h2 class="link-light fs-1 text-uppercase"><?php echo get_the_title($photo->ID);?></h2>
+                                    </div>
+                                </div>
+
+                                <div class="dark-overlay"></div>
+                                <div class="position-absolute bottom-0 start-0 text-center link-light w-100" style="z-index:100;">
+                                    <?php echo p401_get_photo_category($photo->ID, 'category-photos'); ?>
+                                </div>
+                            </a>
+                        </div>
+
+                    <?php endif; ?>
 
                 <?php endforeach;?>
             </div>

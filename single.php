@@ -16,7 +16,7 @@
                 <div class="align-self-center"><?php echo get_the_author(); ?></div>
             </div>
 
-            <h1 class="fs-0 text-uppercase fw-light"><?php echo get_the_title();?></h1>
+            <h1 class="fs-1 text-uppercase fw-light"><?php echo get_the_title();?></h1>
 
             <div class="col-12 fs-4 align-self-center text-center text-lg-start mb-4">
 

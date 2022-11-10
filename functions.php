@@ -66,7 +66,7 @@ function punto401_script_enqueue() {
 
 
     wp_enqueue_script( 'jqeury-defer', get_template_directory_uri().'/assets/js/jquery-3.6.0.min.js' );
-    wp_enqueue_script( 'splide-defer', get_template_directory_uri() .'/assets/js/fancybox.umd.js' );
+    wp_enqueue_script( 'fancybox-defer', get_template_directory_uri() .'/assets/js/fancybox.umd.js' );
     wp_enqueue_script( 'splide-defer', get_template_directory_uri() .'/assets/js/splide.min.js' );
     wp_enqueue_script( 'bootstrap-js-defer', get_template_directory_uri() .'/assets/js/bootstrap.bundle.min.js' );
     wp_enqueue_script( 'font-awesome-defer', get_template_directory_uri() .'/assets/js/fontawesome.min.js' );
@@ -119,9 +119,20 @@ function punto401_script_enqueue() {
     function check_post_type_and_remove_media_buttons() {
         global $current_screen;
         // Replace following array items with your own custom post types
-        $post_types = array('messages, website');
+        $post_types = array('messages, website', 'photos', 'design', 'video', 'social');
         if (in_array($current_screen->post_type,$post_types)) {
         remove_action('media_buttons', 'media_buttons');
+        }
+    }
+
+    function p401_get_photo_category($postID, $taxonomy){
+        
+        $terms_list = array_reverse(wp_get_post_terms( $postID, $taxonomy ) );
+
+        if ( ! empty( $terms_list ) && ! is_wp_error( $terms_list ) ) {
+            foreach ( $terms_list as $term ) {
+                return $term->name;
+            }
         }
     }
     

@@ -282,6 +282,22 @@ header .logo{
     background-color: rgba(0, 0, 0, 0.3);
 }
 
+.dark-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 5;
+    transition: 0.2s;
+}
+
+.thumbnail-element:hover .dark-overlay{
+    transition: 0.3s;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
 .overlay-team {
     position: absolute;
     top: 0;

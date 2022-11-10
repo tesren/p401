@@ -4,8 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Punto401 - Agencia de Marketing Digital en Puerto Vallarta</title>
-    <meta name="description" content="Agencia de Marketing Digital especializada en Bienes Raíces, creamos recursos audiovisuales, sitios web, tu imagen corporativa y manejamos tus redes sociales. Todo esto para asegurarnos que tu propiedad llegue a la máxima cantidad de compradores potenciales.">
+
+    <?php if(is_front_page()): ?>
+        <title>Punto401 - Agencia de Marketing Digital en Puerto Vallarta</title>
+        <meta name="description" content="Agencia de Marketing Digital especializada en Bienes Raíces, creamos recursos audiovisuales, sitios web, tu imagen corporativa y manejamos tus redes sociales. Todo esto para asegurarnos que tu propiedad llegue a la máxima cantidad de compradores potenciales.">
+	<?php elseif(is_post_type_archive()):?>
+		<title>Punto401 - <?php echo post_type_archive_title(); ?></title>
+        <meta name="description" content="Portafolio de Punto401 Marketing de <?php echo post_type_archive_title(); ?>, especializados en Bíenes Raíces">
+    <?php elseif( is_page() ):?>
+		<title>Punto401 - <?php echo single_post_title(); ?></title>
+        <meta name="description" content="<?php echo get_the_excerpt(); ?>">
+	<?php else: ?>
+		<title>Punto401 - <?php echo the_title(); ?></title>
+        <meta name="description" content="<?php echo get_the_excerpt(); ?>">
+	<?php endif; ?>
+
     <meta name="theme-color" content="#1a1a1a">
 
     <?php if(!is_front_page()): ?>
