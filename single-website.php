@@ -37,6 +37,15 @@
                         <h2 class="text-uppercase">Información del proyecto</h2>
                         <div class="fw-light"><?php echo the_content(); ?></div>
                         <div>Año: <?php echo rwmb_meta('year'); ?></div>
+                        <div>
+                            Categorías: 
+                            <?php $terms = get_the_terms( get_the_ID(), 'category-p401'); ?>
+                            <?php foreach($terms as $term): ?>
+                                <a href="<?php echo get_term_link( $term->term_id , 'category-p401' ) ?>" class="link-light me-1">
+                                    <?php echo $term->name; ?>
+                                </a> | 
+                            <?php endforeach; ?> 
+                        </div>
                     </div>
                 </div>
 

@@ -35,7 +35,7 @@ function video_register_post_type(){
             'title',
             'editor',
             //'excerpt',
-            //'thumbnail',
+            'thumbnail',
             'revisions',
         ),
         //'taxonomies' => array('category', 'post_tag'),
@@ -85,22 +85,12 @@ function video_register_meta_boxes( $meta_boxes ) {
                 'placeholder'   =>   'Año de finalización',
             ],
             [
-                'name'             => 'Videos Horizontales',
-                'id'               => 'horizontal_videos',
-                'type'             => 'video',
-                'max_file_uploads' => 3,
-                'force_delete'     => false,
-                'max_status'       => true,
-                'desc'      => 'Suba solamente videos horizontales'
-            ],
-            [
-                'name'             => 'Videos Verticales',
-                'id'               => 'vertical_videos',
-                'type'             => 'video',
-                'max_file_uploads' => 3,
-                'force_delete'     => false,
-                'max_status'       => true,
-                'desc'      => 'Suba solamente videos verticales como Reels'
+                'id'    => 'videos',
+                'name'  => 'Link de YouTube',
+                'type'  => 'oembed',
+                'desc'  => 'De clic en el boton si desea agregar mas videos',
+                'placeholder'  => 'Pegue el link de YouTube',
+                'clone' => true,
             ],
         ],
     ];

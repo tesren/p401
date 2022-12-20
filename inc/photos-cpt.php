@@ -76,10 +76,10 @@ function p401_photos_custom_taxonomies(){
         'show_ui' => true,
         'show_admin_column' => true, //muestra u oculta la columna en vista admon para filtrar
         'query_var' => true,
-        'rewrite' => array('slug' => 'category') //Este parametro saldra en la URL
+        'rewrite' => array('slug' => 'category-p401') //Este parametro saldra en la URL
     );
 
-    register_taxonomy('category-photos', array('photos'), $args );
+    register_taxonomy('category-p401', array('photos', 'design', 'social', 'video', 'website'), $args );
 
 }
 

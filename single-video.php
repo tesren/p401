@@ -10,13 +10,14 @@
                     'numberposts' => 4,
                     'exclude'=> get_the_ID(),
                 ));
-                $horizontal_videos = rwmb_meta('horizontal_videos', ['size'=>'full', 'limit'=>14]);
-                $vertical_videos = rwmb_meta('vertical_videos', ['size'=>'medium', 'limit'=>4]); 
+                $youtube_videos = rwmb_meta('videos');
             ?>
 
             <div class="position-relative">
                 <div class="fondo-oscuro" style="background-color: rgba(0, 0, 0, 0.5);"></div>
-                <video class="w-100 d-block" src="<?php echo $horizontal_videos[0]['src']; ?>" autoplay muted loop style="height:100vh; object-fit:cover;"></video>
+
+                <img src="<?php echo get_the_post_thumbnail_url( get_the_ID(), 'large'); ?>" alt="<?php echo get_the_title(); ?>" class="w-100">
+
                 <div class="row justify-content-center position-absolute top-0 start-0 w-100 h-100">
                     <div class="col-12 text-center align-self-center">
                         <h1 class="fs-0 fw-light text-uppercase">Video</h1>
@@ -38,6 +39,15 @@
                         <h2 class="text-uppercase">Información del proyecto</h2>
                         <div class="fw-light"><?php echo the_content(); ?></div>
                         <div>Año: <?php echo rwmb_meta('year'); ?></div>
+                        <div>
+                            Categorías: 
+                            <?php $terms = get_the_terms( get_the_ID(), 'category-p401'); ?>
+                            <?php foreach($terms as $term): ?>
+                                <a href="<?php echo get_term_link( $term->term_id , 'category-p401' ) ?>" class="link-light me-1">
+                                    <?php echo $term->name; ?>
+                                </a> | 
+                            <?php endforeach; ?> 
+                        </div>
                     </div>
                 </div>
 
@@ -48,29 +58,14 @@
             </div>
 
             <div class="container mt-5">
+                <h3 class="fs-1 text-center my-5 fw-light text-uppercase">Videos</h3>
 
-                <div class="row w-100">
-                    
-                    <?php foreach ( $horizontal_videos as $video ) : ?>
-                        <div class="col-12 px-0 pb-3 mb-5">
-                            <video class="w-100 d-block" src="<?php echo $video['src']; ?>" controls></video>
-                            <p class="fs-5 fw-light mt-3"><?php echo $video['description']; ?></p>
-                        </div>
-                    <?php endforeach ?>
+                <div class="row w-100 justify-content-center">
+                
+                    <div class="col-12 col-lg-8" id="col-videos">
+                        <?php echo $youtube_videos; ?>
+                    </div>        
 
-                </div>
-
-                <h3 class="fs-1 text-center my-5 fw-light text-uppercase">Redes Sociales</h3>
-
-                <div class="row justify-content-center w-100 mb-3 mb-lg-0" >
-                    
-                    <?php foreach ( $vertical_videos as $video ) : ?>
-                        <div class="col-12 col-lg-4 pb-3 mb-5">
-                            <video class="w-100 d-block" src="<?php echo $video['src']; ?>" controls></video>
-                            <p class="fs-5 fw-light mt-3"><?php echo $video['description']; ?></p>
-                        </div>
-                    <?php endforeach ?>
-                    
                 </div>
 
                 

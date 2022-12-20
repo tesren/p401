@@ -40,7 +40,15 @@
                         <h2 class="text-uppercase">Información del proyecto</h2>
                         <div class="fw-light"><?php echo the_content(); ?></div>
                         <div>Año: <?php echo rwmb_meta('year'); ?></div>
-                        <div>Categoría: <?php echo p401_get_photo_category(get_the_ID(), 'category-photos'); ?></div>
+                        <div>
+                            Categorías: 
+                            <?php $terms = get_the_terms( get_the_ID(), 'category-p401'); ?>
+                            <?php foreach($terms as $term): ?>
+                                <a href="<?php echo get_term_link( $term->term_id , 'category-p401' ) ?>" class="link-light me-1">
+                                    <?php echo $term->name; ?>
+                                </a> | 
+                            <?php endforeach; ?> 
+                        </div>
                     </div>
                 </div>
 
@@ -81,7 +89,7 @@
                                     </div>
                                 </div>
                                 <div class="position-absolute bottom-0 start-0 text-center link-light w-100" style="z-index:100;">
-                                    <?php echo p401_get_photo_category($photo->ID, 'category-photos'); ?>
+                                    <?php echo p401_get_photo_category($photo->ID, 'category-p401'); ?>
                                 </div>
                             </a>
                         </div>
@@ -100,7 +108,7 @@
 
                                 <div class="dark-overlay"></div>
                                 <div class="position-absolute bottom-0 start-0 text-center link-light w-100" style="z-index:100;">
-                                    <?php echo p401_get_photo_category($photo->ID, 'category-photos'); ?>
+                                    <?php echo p401_get_photo_category($photo->ID, 'category-p401'); ?>
                                 </div>
                             </a>
                         </div>

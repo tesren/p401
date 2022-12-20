@@ -4,9 +4,9 @@
 
     <div class="bg-gradiant position-relative" style="padding-top:155px;">
         <h1 class="fs-0 text-center text-uppercase mb-4" style="font-weight:200;">
-            <div class="ms-2" style="margin-right:120px;">PORTAFOLIO</div>
+            <div class="ms-2" style="margin-right:120px;">Categoría</div>
             <div style="margin-left:120px;">
-                DE <?php echo post_type_archive_title( '', false ) ; ?>
+                <?php $term = get_term_by('slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) ); echo $term->name; ?>
                 <img width="20px" src="<?php echo get_template_directory_uri() .'/assets/images/text-decoration.svg';?>" alt="">
             </div>
         </h1>
@@ -34,13 +34,13 @@
                                 <img class="w-100 px-5" src="<?php echo $logoArray[0]['url']; ?>" alt="<?php echo get_the_title();?>">
                             </div>
                         </div>
-                        <div class="position-absolute bottom-0 start-0 text-center w-100 mb-2" style="z-index:100;">
-                            <?php $terms = get_the_terms( get_the_ID(), 'category-p401'); ?>
-                            <?php foreach($terms as $term): ?>
-                                <a href="<?php echo get_term_link( $term->term_id , 'category-p401' ) ?>" class="badge bg-dark text-decoration-none">
-                                    <?php echo $term->name; ?>
-                                </a>
-                            <?php endforeach; ?> 
+                        <div class="position-absolute bottom-0 start-0 text-center link-light w-100 mb-2" style="z-index:100;">
+                            <a href="<?php echo get_post_type_archive_link( get_post_type( get_the_ID() ) );?>" class="badge bg-dark text-decoration-none">
+                                <?php 
+                                    $postType = get_post_type_object(get_post_type());
+                                    if ($postType) {echo esc_html($postType->labels->singular_name);} 
+                                ?>
+                            </a>
                         </div>
                     </a>
                 </div>
@@ -57,12 +57,12 @@
                         </div>
                         <div class="dark-overlay"></div>
                         <div class="position-absolute bottom-0 start-0 text-center w-100 mb-2" style="z-index:100;">
-                            <?php $terms = get_the_terms( get_the_ID(), 'category-p401'); ?>
-                            <?php foreach($terms as $term): ?>
-                                <a href="<?php echo get_term_link( $term->term_id , 'category-p401' ) ?>" class="badge bg-dark text-decoration-none">
-                                    <?php echo $term->name; ?>
-                                </a>
-                            <?php endforeach; ?> 
+                            <a href="<?php echo get_post_type_archive_link( get_post_type( get_the_ID() ) );?>" class="badge bg-dark text-decoration-none">
+                                <?php 
+                                    $postType = get_post_type_object(get_post_type());
+                                    if ($postType) {echo esc_html($postType->labels->singular_name);} 
+                                ?>
+                            </a>
                         </div>
                     </a>
                 </div>

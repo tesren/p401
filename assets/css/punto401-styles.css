@@ -273,6 +273,12 @@ header .logo{
     opacity: 1;
 }
 
+#col-videos iframe{
+    width: 100% !important;
+    height: 500px !important;
+    margin-bottom: 30px;
+}
+
 .fondo-oscuro{
     position: absolute;
     top: 0;
