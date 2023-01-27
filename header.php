@@ -6,24 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <?php if(is_front_page()): ?>
-        <title>Punto401 - Agencia de Marketing Digital en Puerto Vallarta</title>
-        <meta name="description" content="Agencia de Marketing Digital especializada en Bienes Raíces, creamos recursos audiovisuales, sitios web, tu imagen corporativa y manejamos tus redes sociales. Todo esto para asegurarnos que tu propiedad llegue a la máxima cantidad de compradores potenciales.">
-	<?php elseif(is_post_type_archive()):?>
-		<title>Punto401 - <?php echo post_type_archive_title(); ?></title>
-        <meta name="description" content="Portafolio de Punto401 Marketing de <?php echo post_type_archive_title(); ?>, especializados en Bíenes Raíces">
-    <?php elseif( is_page() ):?>
-		<title>Punto401 - <?php echo single_post_title(); ?></title>
-        <meta name="description" content="<?php echo get_the_excerpt(); ?>">
-	<?php else: ?>
-		<title>Punto401 - <?php echo the_title(); ?></title>
-        <meta name="description" content="<?php echo get_the_excerpt(); ?>">
+            <title>Punto401 - Agencia de Marketing Digital en Puerto Vallarta</title>
+            <meta name="description" content="Agencia de Marketing Digital especializada en Bienes Raíces, creamos recursos audiovisuales, sitios web, tu imagen corporativa y manejamos tus redes sociales. Todo esto para asegurarnos que tu propiedad llegue a la máxima cantidad de compradores potenciales.">
+        <?php elseif(is_post_type_archive()):?>
+            <title>Punto401 - <?php echo post_type_archive_title(); ?></title>
+            <meta name="description" content="Portafolio de Punto401 Marketing de <?php echo post_type_archive_title(); ?>, especializados en Bíenes Raíces">
+        <?php elseif( is_page() ):?>
+            <title>Punto401 - <?php echo single_post_title(); ?></title>
+            <meta name="description" content="<?php echo get_the_excerpt(); ?>">
+        <?php else: ?>
+            <title>Punto401 - <?php echo the_title(); ?></title>
+            <meta name="description" content="<?php echo get_the_excerpt(); ?>">
 	<?php endif; ?>
 
     <meta name="theme-color" content="#1a1a1a">
-
-    <?php if(!is_front_page()): ?>
-        <meta name="robots" content="noindex">
-    <?php endif; ?>
 
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -43,33 +39,28 @@
         gtag('config', 'G-VXYYZ3WC4J');
     </script>
 
-    <!-- Facebook Pixel Code -->
+    
+    <!-- Meta Pixel Code -->
     <script>
-        !function(f,b,e,v,n,t,s)
-        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-        n.queue=[];t=b.createElement(e);t.async=!0;
-        t.src=v;s=b.getElementsByTagName(e)[0];
-        s.parentNode.insertBefore(t,s)}(window, document,'script',
-        'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '4727010297378212');
-        fbq('track', 'PageView');
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '4727010297378212');
+    fbq('track', 'PageView');
     </script>
-    <noscript>
-        <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=4727010297378212&ev=PageView&noscript=1"/>
-    </noscript>
-    <!-- End Facebook Pixel Code -->
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=4727010297378212&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
-
-    <link rel="preload" href="<?php echo get_template_directory_uri();?>/assets/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/assets/css/bootstrap.min.css"></noscript>
-
-    <link rel="preload" href="<?php echo get_template_directory_uri();?>/assets/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/assets/css/all.min.css"></noscript>
 
     <?php wp_head(); ?>
 </head>

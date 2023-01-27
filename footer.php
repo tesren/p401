@@ -70,6 +70,8 @@
         <i class="fab fa-whatsapp"></i>
     </a>
 
+    <script src="<?php echo get_template_directory_uri();?>/assets/js/app.js" async></script>
+
     <?php wp_footer(); ?>
 </body>
 </html>

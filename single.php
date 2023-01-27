@@ -40,7 +40,7 @@
 
             <img src="<?php echo get_the_post_thumbnail_url( get_the_ID(), 'full' )?>" alt="<?php echo get_the_title();?>" class="w-100 mb-5">
 
-            <div class="mb-5">
+            <div class="mb-5 fs-5">
                 <?php echo the_content(); ?>
             </div>
 

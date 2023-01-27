@@ -27,8 +27,12 @@ menuBtn.addEventListener('click', () => {
 });
 
 
-$(document).ready( function () { 
-  var splideTeam = new Splide( '#our_team', {
+document.addEventListener("DOMContentLoaded", function(){
+
+  var splideTeam = document.getElementById('our_team');
+
+  if(splideTeam){
+    splideTeam = new Splide( '#our_team', {
       perPage: 4,
       perMove: 1,
       pagination:false,
@@ -38,27 +42,35 @@ $(document).ready( function () {
               perPage: 1,
           },
       },
-  } );
+    } );
+  
+    splideTeam.mount();
+  }
+ 
 
-  var splideClients = new Splide( '#our_clients', {
-    perPage: 3,
-    perMove: 1,
-    pagination:false,
-    rewind : true,
-    breakpoints: {
-        992: {
-            perPage: 1,
-        },
-    },
-} );
+  var splideClients = document.getElementById('our_clients');
 
-  splideTeam.mount();
-  splideClients.mount();
+  if(splideClients){
+    splideClients = new Splide( '#our_clients', {
+      perPage: 3,
+      perMove: 1,
+      pagination:false,
+      rewind : true,
+      breakpoints: {
+          992: {
+              perPage: 1,
+          },
+    },} );
+  
+    splideClients.mount();
+  }
 
 });
 
+
 /**Contact form */
-$('.wpcf7 textarea').attr('rows', 5);
+document.querySelector(".wpcf7 textarea").rows = 5;
+
 
 function copyLink() {
     /* Get the text field */

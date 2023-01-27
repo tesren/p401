@@ -57,20 +57,8 @@ add_filter('script_loader_tag', 'pt_add_async_defer_attributes', 10, 2);
 /* CSS Y JS */
 
 function punto401_script_enqueue() {
-    //Bootstrap y fontawesome los movi a header.php por razones de eficiencia
-    
-    //wp_enqueue_style( 'bootstrap-css-preload', get_template_directory_uri() .'/assets/css/bootstrap.min.css' );
-    wp_enqueue_style( 'splide-css', get_template_directory_uri() .'/assets/css/splide.min.css' );
-    wp_enqueue_style('font_awesome-preload', get_template_directory_uri() . '/assets/css/fancybox.css', array(), '6.1.1', 'all');
-    wp_enqueue_style('customstyle', get_template_directory_uri() . '/assets/css/punto401-styles.css', array(), '1.0.0', 'all');
 
-
-    wp_enqueue_script( 'jqeury-defer', get_template_directory_uri().'/assets/js/jquery-3.6.0.min.js' );
-    wp_enqueue_script( 'fancybox-defer', get_template_directory_uri() .'/assets/js/fancybox.umd.js' );
-    wp_enqueue_script( 'splide-defer', get_template_directory_uri() .'/assets/js/splide.min.js' );
-    wp_enqueue_script( 'bootstrap-js-defer', get_template_directory_uri() .'/assets/js/bootstrap.bundle.min.js' );
-    wp_enqueue_script( 'font-awesome-defer', get_template_directory_uri() .'/assets/js/fontawesome.min.js' );
-    wp_enqueue_script('customjs-defer', get_template_directory_uri() . '/assets/js/p401-scripts.js', array(), '1.0.0', true);
+    wp_enqueue_style( 'app-css', get_template_directory_uri() .'/assets/css/app.css' );
 
 }
 

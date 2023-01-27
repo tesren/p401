@@ -63,7 +63,7 @@
 
         <div class="col-12 col-sm-6 col-xl-3 text-center">
             <div class="circle mb-4">
-                <img src="<?php echo get_template_directory_uri() .'/assets/images/icon1.svg';?>" alt="Metodologia" class="icon">
+                <img src="<?php echo get_template_directory_uri() .'/assets/images/icon1.svg';?>" alt="Metodologia" class="icon" loading="lazy">
             </div>
             <h2 class="circle-title text-center mb-3">Metodologia</h2>
             <p class="white-text">Atraemos a tu cliente potencial mediante la creación de contenido valioso y experiencias hechas a la medida.</p>
@@ -71,7 +71,7 @@
 
         <div class="col-12 col-sm-6 col-xl-3 text-center">
             <div class="circle mb-4">
-                <img src="<?php echo get_template_directory_uri() .'/assets/images/diseno.svg';?> " alt="Diseño" class="icon">
+                <img src="<?php echo get_template_directory_uri() .'/assets/images/diseno.svg';?> " alt="Diseño" class="icon" loading="lazy">
             </div>
             <h2 class="circle-title text-center mb-3">Diseño</h2>
             <p class="white-text">Creamos recursos visualmente atractivos para tu marca en base a lo que busques trasmitirle a tu público.</p>
@@ -79,7 +79,7 @@
 
         <div class="col-12 col-sm-6 col-xl-3 text-center">
             <div class="circle mb-4">
-                <img src="<?php echo get_template_directory_uri() .'/assets/images/update.svg';?>" alt="Actualizados" class="icon2">
+                <img src="<?php echo get_template_directory_uri() .'/assets/images/update.svg';?>" alt="Actualizados" class="icon2" loading="lazy">
             </div>
             <h2 class="circle-title text-center mb-3">Actualizados</h2>
             <p class="white-text">Nuestro equipo se mantiene a la vanguardia de todas las novedades referentes a nuestras áreas de trabajo.</p>
@@ -87,7 +87,7 @@
 
         <div class="col-12 col-sm-6 col-xl-3 pb-5 text-center">
             <div class="circle mb-4">
-                <img src="<?php echo get_template_directory_uri() .'/assets/images/crative.svg';?>" alt="Creatividad" class="icon" >
+                <img src="<?php echo get_template_directory_uri() .'/assets/images/crative.svg';?>" alt="Creatividad" class="icon" loading="lazy">
             </div>
             <h2 class="circle-title text-center mb-3">Creatividad</h2>
             <p class="white-text">Tenemos la capacidad de cambiar e inventar a través de los retos que se nos presentan para encontrar o crear las soluciones más óptimas para ti.</p>
@@ -117,7 +117,7 @@
 
                                 <img src="<?php echo $profilepic[0]['url'];?>" alt="<?php echo get_the_title($member->ID); ?>" class="img-fluid image" loading="lazy">
                                 <div class="overlay-team"></div>
-                                <div class="black-ball top-0 start-0"><img src="<?php echo $icon[0]['url'];?>" alt=""></div>
+                                <div class="black-ball top-0 start-0"><img src="<?php echo $icon[0]['url'];?>" alt="" loading="lazy"></div>
                                         
                             </div>
                         </div>
@@ -278,7 +278,7 @@
     </div>
 
     <div class="col-11 col-lg-3 mb-5 px-0 mx-2 text-center position-relative">
-        <img class="w-100" src="<?php echo get_template_directory_uri() .'/assets/images/foto.jpg';?> " alt="Imagen Corporativa">
+        <img class="w-100" src="<?php echo get_template_directory_uri() .'/assets/images/foto.jpg';?> " alt="Imagen Corporativa" loading="lazy">
         <div class="overlay"></div>
         <div class="row justify-content-center position-absolute w-100 h-100 start-0 top-0" style="z-index:10;">
             <div class="col-12 align-self-center">
@@ -289,7 +289,7 @@
     </div>
 
     <div class="col-11 col-lg-3 mb-5 px-0 mx-2 text-center position-relative">
-        <img class="w-100" src="<?php echo get_template_directory_uri() .'/assets/images/video.jpg';?> " alt="Imagen Corporativa">
+        <img class="w-100" src="<?php echo get_template_directory_uri() .'/assets/images/video.jpg';?> " alt="Imagen Corporativa" loading="lazy">
         <div class="overlay"></div>
         <div class="row justify-content-center position-absolute w-100 h-100 start-0 top-0" style="z-index:10;">
             <div class="col-12 align-self-center">
@@ -300,7 +300,7 @@
     </div>
 
     <div class="col-11 col-lg-3 mb-5 px-0 mx-2 text-center position-relative">
-        <img class="w-100" src="<?php echo get_template_directory_uri() .'/assets/images/design.jpg';?> " alt="Imagen Corporativa">
+        <img class="w-100" src="<?php echo get_template_directory_uri() .'/assets/images/design.jpg';?> " alt="Imagen Corporativa" loading="lazy">
         <div class="overlay"></div>
         <div class="row justify-content-center position-absolute w-100 h-100 start-0 top-0" style="z-index:10;">
             <div class="col-12 align-self-center">
@@ -311,7 +311,7 @@
     </div>
 
     <div class="col-11 col-lg-3 mb-5 px-0 mx-1 text-center position-relative">
-        <img class="w-100" src="<?php echo get_template_directory_uri() .'/assets/images/marketing.jpg';?> " alt="Imagen Corporativa">
+        <img class="w-100" src="<?php echo get_template_directory_uri() .'/assets/images/marketing.jpg';?> " alt="Imagen Corporativa" loading="lazy">
         <div class="overlay"></div>
         <div class="row justify-content-center position-absolute w-100 h-100 start-0 top-0" style="z-index:10;">
             <div class="col-12 align-self-center">
@@ -334,7 +334,7 @@
             <li class="splide__slide p-4">
                 <div class="red-shadow">
                     <div style="height: 150px;" class="card401 p-4">
-                        <img src="<?php echo get_template_directory_uri() .'/assets/images/domus.svg';?>" alt="DOMUS VALLARTA" class="imginbox401">
+                        <img src="<?php echo get_template_directory_uri() .'/assets/images/domus.svg';?>" alt="DOMUS VALLARTA" class="imginbox401" loading="lazy">
                     </div>
                 </div>
             </li>
@@ -342,7 +342,7 @@
             <li class="splide__slide p-4">
                 <div class="red-shadow">
                     <div style="height: 150px;" class="card401 p-4">
-                        <img src="<?php echo get_template_directory_uri() .'/assets/images/c21.svg';?>" alt="Century 21 Ocean Realty" class="imginbox401">
+                        <img src="<?php echo get_template_directory_uri() .'/assets/images/c21-logo-largo-dorado.png';?>" alt="Century 21 Ocean Realty" class="imginbox401" loading="lazy">
                     </div>
                 </div>
             </li>
@@ -350,7 +350,7 @@
             <li class="splide__slide p-4">
                 <div class="red-shadow">
                     <div style="height: 150px;" class="card401 p-4">
-                        <img src="<?php echo get_template_directory_uri() .'/assets/images/cyc.svg';?>" alt="Casas y Condos" class="imginbox401">
+                        <img src="<?php echo get_template_directory_uri() .'/assets/images/cyc.svg';?>" alt="Casas y Condos" class="imginbox401" loading="lazy">
                     </div>
                 </div>
             </li>
@@ -358,7 +358,7 @@
             <li class="splide__slide p-4">
                 <div class="red-shadow">
                     <div style="height: 150px;" class="card401 p-4">
-                        <img src="<?php echo get_template_directory_uri() .'/assets/images/villas-logo.jpg';?>" alt="Villas las Bonitas" class="imginbox401">
+                        <img src="<?php echo get_template_directory_uri() .'/assets/images/villas-logo.jpg';?>" alt="Villas las Bonitas" class="imginbox401" loading="lazy">
                     </div>
                 </div>
             </li>
@@ -366,7 +366,7 @@
             <li class="splide__slide p-4">
                 <div class="red-shadow">
                     <div style="height: 150px;" class="card401 p-4">
-                        <img src="<?php echo get_template_directory_uri() .'/assets/images/laguna-logo-dorado.png';?>" alt="Laguna Living" class="imginbox401">
+                        <img src="<?php echo get_template_directory_uri() .'/assets/images/laguna-logo-dorado.png';?>" alt="Laguna Living" class="imginbox401" loading="lazy">
                     </div>
                 </div>
             </li>
@@ -374,7 +374,7 @@
             <li class="splide__slide p-4">
                 <div class="red-shadow">
                     <div style="height: 150px;" class="card401 p-4">
-                        <img src="<?php echo get_template_directory_uri() .'/assets/images/logogw.png';?>" alt="G&W Inmobiliaria" class="imginbox401">
+                        <img src="<?php echo get_template_directory_uri() .'/assets/images/logogw.png';?>" alt="G&W Inmobiliaria" class="imginbox401" loading="lazy">
                     </div>
                 </div>
             </li>
