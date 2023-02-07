@@ -92,6 +92,32 @@ function video_register_meta_boxes( $meta_boxes ) {
                 'placeholder'  => 'Pegue el link de YouTube',
                 'clone' => true,
             ],
+            [
+                'type' => 'heading',
+                'name' => 'Redes Sociales',
+                'desc' => 'Redes Sociales del Cliente',
+            ],
+            [
+                'name'        => 'Facebook',
+                'id'          => 'facebook_url',
+                'desc'        => 'Pegue el link del perfil de Facebook sin modificar',
+                'type'        => 'text',
+                'placeholder' => 'https://www.facebook.com/nombre-de-usuario',
+            ],
+            [
+                'name'        => 'Instagram',
+                'id'          => 'instagram_url',
+                'desc'        => 'Pegue el link del perfil de Instagram sin modificar',
+                'type'        => 'text',
+                'placeholder' => 'https://www.instagram.com/nombre_de_usuario/',
+            ],
+            [
+                'name'        => 'Sitio web',
+                'id'          => 'website_url',
+                'desc'        => 'Pegue el link del sitio web sin modificar',
+                'type'        => 'text',
+                'placeholder' => 'https://punto401.com/',
+            ],
         ],
     ];
 

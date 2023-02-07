@@ -77,12 +77,6 @@ function websites_register_meta_boxes( $meta_boxes ) {
                 'alpha_channel' => true,
             ],
             [
-                'type'          =>   'text',
-                'name'          =>   'Enlace del sitio web',
-                'id'            =>   'link',
-                'placeholder'   =>   'www.example.com',
-            ],
-            [
                 'type'          =>   'number',
                 'name'          =>   'Año',
                 'id'            =>   'year',
@@ -98,6 +92,33 @@ function websites_register_meta_boxes( $meta_boxes ) {
                 'max_file_uploads' => 8,
                 'max_status'       => true,
                 'image_size'       => 'thumbnail',
+            ],
+            [
+                'type' => 'heading',
+                'name' => 'Redes Sociales',
+                'desc' => 'Redes Sociales del Cliente',
+            ],
+            [
+                'name'        => 'Facebook',
+                'id'          => 'facebook_url',
+                'desc'        => 'Pegue el link del perfil de Facebook sin modificar',
+                'type'        => 'text',
+                'placeholder' => 'https://www.facebook.com/nombre-de-usuario',
+            ],
+            [
+                'name'        => 'Instagram',
+                'id'          => 'instagram_url',
+                'desc'        => 'Pegue el link del perfil de Instagram sin modificar',
+                'type'        => 'text',
+                'placeholder' => 'https://www.instagram.com/nombre_de_usuario/',
+            ],
+            [
+                'name'        => 'Sitio web',
+                'id'          => 'link',
+                'desc'        => 'Pegue el link del sitio web sin modificar',
+                'type'        => 'text',
+                'placeholder' => 'https://punto401.com/',
+                'required'    => true,
             ],
         ],
     ];

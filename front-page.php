@@ -147,7 +147,7 @@
         <div class="card-body">
             <div class="cuadro401"></div>
             <div class="contenido401">
-            <img src="<?php echo get_template_directory_uri() .'/assets/images/real.svg';?>" alt="Foto y video Real Estate" height="45" class="mb-4">
+            <img src="<?php echo get_template_directory_uri() .'/assets/images/real.svg';?>" alt="Foto y video Real Estate" height="45" class="mb-4" loading="lazy">
             <h3 class="card-title fs-5">Fotografia y Video<br>Real Estate</h3>
             <p class="card-text">Somos especialistas en material audiovisual, expertos en el área de bienes raíces</p>
             </div>
@@ -160,7 +160,7 @@
         <div class="card-body">
             <div class="cuadro401"></div>
             <div class="contenido401">
-            <img src="<?php echo get_template_directory_uri() .'/assets/images/social.svg';?>" alt="Social Media Management" height="45" class="mb-4">
+            <img src="<?php echo get_template_directory_uri() .'/assets/images/social.svg';?>" alt="Social Media Management" height="45" class="mb-4" loading="lazy">
             <h3 class="card-title fs-5">Social Media</h3>
             <p class="card-text">Ten presencia en las redes sociales y crea una comunidad que esté interesada en tu producto.</p>
             </div>
@@ -173,7 +173,7 @@
         <div class="card-body">
             <div class="cuadro401"></div>
             <div class="contenido401">
-            <img src="<?php echo get_template_directory_uri() .'/assets/images/design.svg';?>" alt="Imagen corporativa" height="45" class="mb-4">
+            <img src="<?php echo get_template_directory_uri() .'/assets/images/design.svg';?>" alt="Imagen corporativa" height="45" class="mb-4" loading="lazy">
             <h3 class="card-title fs-5">Desarrollar tu imagen<br>corporativa</h3>
             <p class="card-text">Creamos tu imagen corporativa en base a los valores, ideas y objetivos que quieras transmitirle a tus futuros clientes</p>
             </div>
@@ -189,7 +189,7 @@
         <div class="card-body">
             <div class="cuadro401"></div>
             <div class="contenido401">
-            <img src="<?php echo get_template_directory_uri() .'/assets/images/seo.svg';?>" alt="SEO" height="45" class="mb-4">
+            <img src="<?php echo get_template_directory_uri() .'/assets/images/seo.svg';?>" alt="SEO" height="45" class="mb-4" loading="lazy">
             <h3 class="card-title fs-5">SEO (Search Engine Optimazation)</h3>
             <p class="card-text">Nos encargamos de mejorar la visibilidad de tu sitio web en los diferentes buscadores que existen</p>
             </div>
@@ -202,7 +202,7 @@
         <div class="card-body">
             <div class="cuadro401"></div>
             <div class="contenido401">
-            <img src="<?php echo get_template_directory_uri() .'/assets/images/web.svg';?>" alt="Diseño Web" height="45" class="mb-4">
+            <img src="<?php echo get_template_directory_uri() .'/assets/images/web.svg';?>" alt="Diseño Web" height="45" class="mb-4" loading="lazy">
             <h3 class="card-title fs-5">Diseño Web</h3>
             <p class="card-text">Ten tu negocio abierto 24/7 con un sitio web atractivo y funcional, todo hecho en base a lo que necesites</p>
             </div>
@@ -267,7 +267,7 @@
 <div class="row align-items-center justify-content-center mb-5">
 
     <div class="col-11 col-lg-3 mb-5 px-0 mx-2 text-center position-relative">
-        <img class="w-100" src="<?php echo get_template_directory_uri() .'/assets/images/website.jpg';?> " alt="Imagen Corporativa">
+        <img class="w-100" src="<?php echo get_template_directory_uri() .'/assets/images/website.jpg';?> " alt="Imagen Corporativa" loading="lazy">
         <div class="overlay"></div>
         <div class="row justify-content-center position-absolute w-100 h-100 start-0 top-0" style="z-index:10;">
             <div class="col-12 align-self-center">

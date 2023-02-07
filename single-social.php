@@ -7,7 +7,7 @@
             <?php 
                 $photos = get_posts(array(
                     'post_type' => 'social',
-                    'numberposts' => 4,
+                    'numberposts' => 3,
                     'exclude'=> get_the_ID(),
                 ));
                 $imagesFull = rwmb_meta('images', ['size'=>'full', 'limit'=>14]);
@@ -101,6 +101,36 @@
                 </div>
             </div>
             
+            <?php if(rwmb_meta('facebook_url') or rwmb_meta('instagram_url') or rwmb_meta('website_url')): ?>
+                <h4 class="fs-1 fw-light text-uppercase text-center mt-5 pt-5 mb-4">Redes del cliente</h4>
+                <div class="row justify-content-center text-center">
+
+                        <?php if(rwmb_meta('facebook_url')): ?>
+                            <div class="col-4 col-lg-1">
+                                <a href="<?php echo rwmb_meta('facebook_url'); ?>" target="_blank" class="link-light" rel="noopener noreferrer" aria-label="Facebook">
+                                    <i class="fa-brands fs-1 fa-facebook" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Facebook"></i>
+                                </a>
+                            </div>
+                        <?php endif; ?>
+
+                        <?php if(rwmb_meta('instagram_url')): ?>
+                            <div class="col-4 col-lg-1">
+                                <a href="<?php echo rwmb_meta('instagram_url'); ?>" target="_blank" class="link-light" rel="noopener noreferrer" aria-label="Instagram">
+                                    <i class="fa-brands fs-1 fa-instagram" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Instagram"></i>
+                                </a>
+                            </div>
+                        <?php endif; ?>
+
+                        <?php if(rwmb_meta('website_url')): ?>
+                            <div class="col-4 col-lg-1">
+                                <a href="<?php echo rwmb_meta('website_url'); ?>" target="_blank" class="link-light" rel="noopener noreferrer" aria-label="Sitio Web">
+                                    <i class="fa-solid fs-1 fa-globe" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Sitio web"></i>
+                                </a>
+                            </div>
+                        <?php endif; ?>
+
+                </div>
+            <?php endif; ?>
 
             <h4 class="fs-1 fw-light text-uppercase text-center my-5 pt-5">Otros portafolios de Redes Sociales</h4>
             <div class="row justify-content-center mb-5" >
