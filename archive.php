@@ -48,7 +48,7 @@
             <?php else: ?>
                 <div class="col-12 col-lg-3 mx-2 mb-4 position-relative px-0 thumbnail-element">
                     <a href="<?php echo get_the_permalink();?>" class="w-100 h-100 text-decoration-none">
-                        <?php $images = rwmb_meta('images', ['size'=>'full', 'limit'=>14]);?>
+                        <?php $images = rwmb_meta('images', ['size'=>'medium_large', 'limit'=>14]);?>
                         <img class="w-100" src="<?php echo $images[0]['url']; ?>" alt="<?php echo get_the_title();?>" style="height:650px; object-fit:cover;">
                         <div class="row justify-content-center position-absolute top-0 start-0 h-100 w-100" style="z-index:100;">
                             <div class="col-12 align-self-center text-center">

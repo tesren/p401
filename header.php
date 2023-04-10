@@ -60,7 +60,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
     <?php wp_head(); ?>
 </head>
@@ -80,7 +80,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 $custom_logo_id = get_theme_mod( 'custom_logo' );
                 $image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
             ?>
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" class="logo">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" class="logo" alt="Logo de Punto401 Marketing">
         </a>
         
         <div class="menu-btn" onclick="toggleMenu()">

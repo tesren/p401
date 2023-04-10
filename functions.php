@@ -98,7 +98,8 @@ function punto401_script_enqueue() {
     require get_template_directory() . '/inc/messages-cpt.php';
     require get_template_directory() . '/inc/members-cpt.php';
     require get_template_directory() . '/inc/websites-cpt.php';
-    require get_template_directory() . '/inc/photos-cpt.php';
+    //require get_template_directory() . '/inc/photos-cpt.php';
+    require get_template_directory() . '/inc/foto-inmob-cpt.php';
     require get_template_directory() . '/inc/design-cpt.php';
     require get_template_directory() . '/inc/video-cpt.php';
     require get_template_directory() . '/inc/socialmedia-cpt.php';

@@ -283,7 +283,7 @@
         <div class="row justify-content-center position-absolute w-100 h-100 start-0 top-0" style="z-index:10;">
             <div class="col-12 align-self-center">
                 <h2>Fotografía</h2>
-                <a href="<?php echo get_post_type_archive_link( 'photos' );?>" class="btn btn-outline-light rounded-0 px-4">Ver más</a>
+                <a href="<?php echo get_post_type_archive_link( 'foto-inmobiliaria' );?>" class="btn btn-outline-light rounded-0 px-4">Ver más</a>
             </div>
         </div>
     </div>

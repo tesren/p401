@@ -1,11 +1,11 @@
 <?php
-add_action( 'init', 'photos_register_post_type' );
+add_action( 'init', 'foto_register_post_type' );
 
-function photos_register_post_type(){
+function foto_register_post_type(){
 
     $labels = array(
-        'menu_name'          =>  'Fotografía' ,
-        'name_admin_bar'     =>  'Fotografía' ,
+        'menu_name'          =>  'Fotografía Inmobiliaria' ,
+        'name_admin_bar'     =>  'Fotografía Inmobiliaria' ,
         'add_new'            =>  'Agregar Proyecto de Foto' ,
         'add_new_item'       =>  'Agregar Proyecto de Foto' ,
         'new_item'           =>  'Nuevo Proyecto de Fotografía' ,
@@ -45,54 +45,20 @@ function photos_register_post_type(){
 
     );
 
-    register_post_type('photos', $args);
+    register_post_type('foto-inmobiliaria', $args);
 
 }
 
-add_action('init', 'photos_register_post_type');
+add_action('init', 'foto_register_post_type');
 
 
-function p401_photos_custom_taxonomies(){
+add_filter( 'rwmb_meta_boxes', 'foto_register_meta_boxes' );
 
-    //add new taxonomi heirarchical
-    $labels = array(
-        'name' => 'Categorías', //Puede ser casas, depas, terrenos
-        'singular_name' => 'Categoría',
-        'search_items' => 'Buscar Categorías',
-        'all_items' => 'Todas las Categorías',
-        'parent_item' => 'Categoría Padre', 
-        'parent_item_colon' => 'Categoría Padre:',
-        'edit_item' => 'Editar Categoría',
-        'update_item' => 'Actualizar Categoría',
-        'add_new_item' => 'Agregar Categoría', 
-        'new_item_name' => 'Nueva Categoría',
-        'manu_name' => 'Categorías'
-    );
-
-    $args = array(
-        'hierarchical' => false,
-        'labels' => $labels,
-        'show_in_menu' => true,
-        'show_ui' => true,
-        'show_admin_column' => true, //muestra u oculta la columna en vista admon para filtrar
-        'query_var' => true,
-        'rewrite' => array('slug' => 'category-p401') //Este parametro saldra en la URL
-    );
-
-    register_taxonomy('category-p401', array('photos', 'design', 'social', 'video', 'website'), $args );
-
-}
-
-add_action('init', 'p401_photos_custom_taxonomies');
-
-
-add_filter( 'rwmb_meta_boxes', 'photos_register_meta_boxes' );
-
-function photos_register_meta_boxes( $meta_boxes ) {
+function foto_register_meta_boxes( $meta_boxes ) {
 
     $meta_boxes[] = [
         'title'   => 'Info del proyecto de Foto' ,
-        'post_types' => 'photos',
+        'post_types' => 'foto-inmobiliaria',
         
         'fields'  => [
             [
