@@ -153,6 +153,13 @@ header .logo{
     max-width: 50vw;
 }
 
+.shadow-3 {
+    box-shadow: 0 1px 8px #fff3,0 3px 4px #ffffff24,0 3px 3px -2px #ffffff1f;
+}
+
+iframe{
+    width: 100% !important;
+}
 
 /*CONFIAR EN NOSOTROS*/
 .icon{
@@ -507,6 +514,23 @@ footer p{
     background-color: var(--white)!important;
     color: var(--black)!important;
     transition: 0.2s;
+}
+
+.pagination{
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.pagination a {
+    color: white !important;
+}
+.pagination span {
+    color: #fff;
+    background-color: var(--red);
+    border-radius: 15px;
+    padding-left: 0.6rem !important;
+    padding-right: 0.6rem !important;
+    padding-top: 0.3rem !important;
 }
 
 

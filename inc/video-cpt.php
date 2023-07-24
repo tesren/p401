@@ -61,22 +61,6 @@ function video_register_meta_boxes( $meta_boxes ) {
         
         'fields'  => [
             [
-                'id'               => 'logo',
-                'name'             => 'Logo de la empresa',
-                'type'             => 'image_advanced',
-                'force_delete'     => false,
-                'max_file_uploads' => 1,
-                'max_status'       => true,
-                'image_size'       => 'thumbnail',
-                'desc'      => 'Suba el logo en formato PNG y en color blanco de preferencia'
-            ],
-            [
-                'name'          => 'Color de fondo',
-                'id'            => 'background_color',
-                'type'          => 'color',
-                'alpha_channel' => true,
-            ],
-            [
                 'type'          =>   'number',
                 'name'          =>   'Año',
                 'id'            =>   'year',
@@ -88,9 +72,9 @@ function video_register_meta_boxes( $meta_boxes ) {
                 'id'    => 'videos',
                 'name'  => 'Link de YouTube',
                 'type'  => 'oembed',
-                'desc'  => 'De clic en el boton si desea agregar mas videos',
+                'desc'  => 'IMPORTANTE, usar el URL que te da YouTube en el botón de compartir',
                 'placeholder'  => 'Pegue el link de YouTube',
-                'clone' => true,
+                //'clone' => true,
             ],
             [
                 'type' => 'heading',

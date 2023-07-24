@@ -87,15 +87,12 @@
                 </div>
 
                 <div class="row w-100">
-                    <div class="col-12 px-0 mb-3">
-                        <img src="<?php echo $imagesFull[7]['url']; ?>" alt="<?php echo $imagesFull[7]['title']; ?>" class="w-100" data-fancybox="gallery">
-                    </div>
 
                     <div class="col-12 col-lg-6 pe-0 pe-lg-3 ps-0 mb-3">
-                        <img src="<?php echo $imagesFull[8]['url']; ?>" alt="<?php echo $imagesFull[8]['title']; ?>" class="w-100" style="height:617px; object-fit:cover;" data-fancybox="gallery">
+                        <img src="<?php echo $imagesFull[7]['url']; ?>" alt="<?php echo $imagesFull[7]['title']; ?>" class="w-100" style="height:617px; object-fit:cover;" data-fancybox="gallery">
                     </div>
                     <div class="col-12 col-lg-6 px-0 mb-3">
-                        <img src="<?php echo $imagesFull[9]['url']; ?>" alt="<?php echo $imagesFull[9]['title']; ?>" class="w-100" style="height:617px; object-fit:cover;" data-fancybox="gallery">
+                        <img src="<?php echo $imagesFull[8]['url']; ?>" alt="<?php echo $imagesFull[8]['title']; ?>" class="w-100" style="height:617px; object-fit:cover;" data-fancybox="gallery">
                     </div>
 
                 </div>

@@ -71,6 +71,9 @@
 
                 
         <?php endwhile;?>
+        
+        <?php the_posts_pagination( ); ?>
+
     </div>
 
 <?php else:?>
