@@ -533,10 +533,19 @@ footer p{
     padding-top: 0.3rem !important;
 }
 
+.folio-img{
+    height:500px;
+    object-fit:cover;
+}
+
 
 @media (max-width: 1024px){
     /* MENU */
 
+    .folio-img{
+        height:auto;
+        object-fit:contain;
+    }
     .menu-btn{
         position: relative;
         display: flex;
@@ -658,6 +667,11 @@ footer p{
     }
 }
 @media (max-width: 540px){
+
+    .folio-img{
+        height:auto;
+        object-fit:contain;
+    }
     .fs-0{
         font-size: 3rem;
     }

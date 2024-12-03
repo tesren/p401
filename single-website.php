@@ -64,11 +64,11 @@
                     </div>
                     
                     <div class="col-12 col-lg-8 ps-0 pe-0 pe-lg-3 pb-3">
-                        <img src="<?php echo $imagesFull[2]['url']; ?>" alt="<?php echo $imagesFull[2]['title']; ?>" class="w-100" style="height:500px; object-fit:cover;">
+                        <img src="<?php echo $imagesFull[2]['url']; ?>" alt="<?php echo $imagesFull[2]['title']; ?>" class="w-100 folio-img">
                     </div>
 
                     <div class="col-12 col-lg-4 px-0 pb-3">
-                        <img src="<?php echo $imagesFull[3]['url']; ?>" alt="<?php echo $imagesFull[3]['title']; ?>" class="w-100" style="height:500px; object-fit:cover;">
+                        <img src="<?php echo $imagesFull[3]['url']; ?>" alt="<?php echo $imagesFull[3]['title']; ?>" class="w-100 folio-img">
                     </div>
 
                     <div class="col-12 px-0 pb-3">

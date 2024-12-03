@@ -23,9 +23,44 @@
     <div class="row justify-content-center mb-5" >
         <?php while( have_posts() ): the_post();?>
 
-            <?php $logoArray = rwmb_meta('logo', ['size'=>'full', 'limit'=>1]) ?>
+            <?php 
+                $logoArray = rwmb_meta('logo', ['size'=>'full', 'limit'=>1]);
+                $postType = get_post_type_object(get_post_type());
+            ?>
+
+            <?php if( $postType->labels->singular_name == 'Video' ): ?>
+
+                <div class="col-12 col-lg-3 mb-4 position-relative p-0 mx-2 shadow-3 rounded-4 align-self-center">
+
+                    <a href="<?php echo get_the_permalink();?>" class="w-100 h-100 text-decoration-none">
+
+                        <?php 
+                            $portrait_id = rwmb_get_value('videos');
+                            $portrait_id = substr($portrait_id, 17);
+                        ?>
+
+                        <img class="w-100 rounded-4" src="https://i.ytimg.com/vi/<?php echo $portrait_id; ?>/maxresdefault.jpg" alt="<?php echo get_the_title();?>" style=" object-fit:cover;">
+
+                        <div class="row position-absolute top-0 start-0 h-100 w-100">
+                            <div class="col-12 align-self-center text-center text-white">
+                                <i class="fa-solid fa-2x fa-play"></i>
+                            </div>
+                        </div>
+
+                        <div class="position-absolute bottom-0 start-0 text-center w-100 mb-2" style="z-index:100;">
+                            <?php $terms = get_the_terms( get_the_ID(), 'category-p401'); ?>
+                            <?php foreach($terms as $term): ?>
+                                <a href="<?php echo get_term_link( $term->term_id , 'category-p401' ) ?>" class="badge bg-dark text-decoration-none">
+                                    <?php echo $term->name; ?>
+                                </a>
+                            <?php endforeach; ?> 
+                        </div>
+
+                    </a>
+
+                </div>
                 
-            <?php if(count($logoArray) == 1): ?>
+            <?php elseif(count($logoArray) == 1): ?>
                 
                 <div class="col-12 col-lg-3 mx-2 mb-4 px-0 position-relative archive-element">
                     <a href="<?php echo get_the_permalink();?>" class="w-100 h-100 text-decoration-none">
@@ -37,7 +72,6 @@
                         <div class="position-absolute bottom-0 start-0 text-center link-light w-100 mb-2" style="z-index:100;">
                             <a href="<?php echo get_post_type_archive_link( get_post_type( get_the_ID() ) );?>" class="badge bg-dark text-decoration-none">
                                 <?php 
-                                    $postType = get_post_type_object(get_post_type());
                                     if ($postType) {echo esc_html($postType->labels->singular_name);} 
                                 ?>
                             </a>

@@ -7,7 +7,7 @@
 
     <?php if(is_front_page()): ?>
             <title>Punto401 - Agencia de Marketing Digital en Puerto Vallarta</title>
-            <meta name="description" content="Agencia de Marketing Digital especializada en Bienes Raíces, creamos recursos audiovisuales, sitios web, tu imagen corporativa y manejamos tus redes sociales. Todo esto para asegurarnos que tu propiedad llegue a la máxima cantidad de compradores potenciales.">
+            <meta name="description" content="Somos una Agencia de Marketing Digital con especialización en Bienes Raíces en Puerto Vallarta. Nuestros servicios abarcan la creación de recursos audiovisuales, desarrollo de sitios web, implementación de estrategias de SEO, diseño de tu imagen corporativa y gestión integral de tus redes sociales. Nuestro objetivo es garantizar que tu propiedad o empresa llegue a la máxima cantidad de compradores potenciales en Puerto Vallarta y sus alrededores.">
         <?php elseif(is_post_type_archive()):?>
             <title>Punto401 - <?php echo post_type_archive_title(); ?></title>
             <meta name="description" content="Portafolio de Punto401 Marketing de <?php echo post_type_archive_title(); ?>, especializados en Bíenes Raíces">

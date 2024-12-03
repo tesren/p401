@@ -7,13 +7,15 @@
                        
         <div class="container" style="margin-top:140px;">
 
-            <div class="my-4 d-flex">
+            <div class="my-4 row">
                 <?php foreach($categories as $cat): ?>
-                    <div class="badge bg-danger fs-6 fw-light rounded-pill me-3"><?php echo $cat->name; ?></div>
+                    <div class="col-4 col-lg-2">
+                        <div class="badge bg-danger fs-6 fw-light rounded-pill mb-3 w-100"><?php echo $cat->name; ?></div>
+                    </div>
                 <?php endforeach; ?>
                 
-                <div class="me-3 align-self-center"><?php echo get_the_date(); ?></div>
-                <div class="align-self-center"><?php echo get_the_author(); ?></div>
+                <div class="col-12 col-lg-2 me-3 mb-3 align-self-center"><?php echo get_the_date(); ?></div>
+               
             </div>
 
             <h1 class="fs-1 text-uppercase fw-light"><?php echo get_the_title();?></h1>

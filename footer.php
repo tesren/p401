@@ -66,7 +66,7 @@
     </footer>
 
     <!--boton whatsapp-->
-    <a href="https://wa.me/523221804703?text=Hola+vengo+del+sitio+web" id="whatsapp" target="_blank" rel="noopener" aria-label="Contactar por whatsapp" title="Whatsapp"  data-bs-toggle="tooltip" data-bs-placement="top" class="border border-dark"> 
+    <a href="https://wa.me/523222461410?text=Hola+vengo+del+sitio+web+de+Punto401" id="whatsapp" target="_blank" rel="noopener" aria-label="Contactar por whatsapp" title="¡Envíanos un mensaje!"  data-bs-toggle="tooltip" data-bs-placement="top" class="border border-dark"> 
         <i class="fab fa-whatsapp"></i>
     </a>
 

@@ -41,11 +41,18 @@
                         <div>
                             Categorías: 
                             <?php $terms = get_the_terms( get_the_ID(), 'category-p401'); ?>
-                            <?php foreach($terms as $term): ?>
-                                <a href="<?php echo get_term_link( $term->term_id , 'category-p401' ) ?>" class="link-light me-1">
-                                    <?php echo $term->name; ?>
-                                </a> | 
-                            <?php endforeach; ?> 
+
+                            <?php
+                                if( count($terms)>0 ): 
+                                    foreach($terms as $term): 
+                            ?>
+                                    <a href="<?php echo get_term_link( $term->term_id , 'category-p401' ) ?>" class="link-light me-1">
+                                        <?php echo $term->name; ?>
+                                    </a> | 
+                            <?php 
+                                    endforeach;
+                                endif;
+                            ?> 
                         </div>
                     </div>
                 </div>
@@ -69,31 +76,49 @@
                         <img src="<?php echo $imagesFull[2]['url']; ?>" alt="<?php echo $imagesFull[2]['title']; ?>" class="w-100" style="height:650px; object-fit:cover;" data-fancybox="gallery">
                     </div>
 
-                    <div class="col-12 px-0 pb-3">
-                        <img src="<?php echo $imagesFull[3]['url']; ?>" alt="<?php echo $imagesFull[3]['title']; ?>" class="w-100" data-fancybox="gallery">
-                    </div>
+                    <?php if( isset($imagesFull[3]['url']) ): ?>
+                        <div class="col-12 px-0 pb-3">
+                            <img src="<?php echo $imagesFull[3]['url']; ?>" alt="<?php echo $imagesFull[3]['title']; ?>" class="w-100" data-fancybox="gallery">
+                        </div>
+                    <?php endif; ?>
 
                 </div>
 
                 <div class="row w-100 mb-3 mb-lg-0" >
                     <div class="col-12 col-lg-7 ps-0 pe-0 pe-lg-3 mb-3">
-                        <img src="<?php echo $imagesFull[4]['url']; ?>" alt="<?php echo $imagesFull[4]['title']; ?>" class="w-100" style="height:617px; object-fit:cover;" data-fancybox="gallery">
+
+                        <?php if( isset($imagesFull[4]['url']) ): ?>
+                            <img src="<?php echo $imagesFull[4]['url']; ?>" alt="<?php echo $imagesFull[4]['title']; ?>" class="w-100" style="height:617px; object-fit:cover;" data-fancybox="gallery">
+                        <?php endif; ?>
+                        
                     </div>
 
                     <div class="col-12 col-lg-5 px-0 text-center" >
-                        <img src="<?php echo $imagesFull[5]['url']; ?>" alt="<?php echo $imagesFull[5]['title']; ?>" class="w-100 mb-3" style="height:300px; object-fit:cover;" data-fancybox="gallery">
-                        <img src="<?php echo $imagesFull[6]['url']; ?>" alt="<?php echo $imagesFull[6]['title']; ?>" class="w-100" style="height:300px; object-fit:cover;" data-fancybox="gallery">
+
+                        <?php if( isset($imagesFull[5]['url']) ): ?>
+                            <img src="<?php echo $imagesFull[5]['url']; ?>" alt="<?php echo $imagesFull[5]['title']; ?>" class="w-100 mb-3" style="height:300px; object-fit:cover;" data-fancybox="gallery">
+                        <?php endif; ?>
+
+                        <?php if( isset($imagesFull[6]['url']) ): ?>
+                            <img src="<?php echo $imagesFull[6]['url']; ?>" alt="<?php echo $imagesFull[6]['title']; ?>" class="w-100" style="height:300px; object-fit:cover;" data-fancybox="gallery">
+                        <?php endif; ?>
+
                     </div>
                 </div>
 
                 <div class="row w-100">
 
-                    <div class="col-12 col-lg-6 pe-0 pe-lg-3 ps-0 mb-3">
-                        <img src="<?php echo $imagesFull[7]['url']; ?>" alt="<?php echo $imagesFull[7]['title']; ?>" class="w-100" style="height:617px; object-fit:cover;" data-fancybox="gallery">
-                    </div>
-                    <div class="col-12 col-lg-6 px-0 mb-3">
-                        <img src="<?php echo $imagesFull[8]['url']; ?>" alt="<?php echo $imagesFull[8]['title']; ?>" class="w-100" style="height:617px; object-fit:cover;" data-fancybox="gallery">
-                    </div>
+                    <?php if( isset($imagesFull[7]['url']) ): ?>
+                        <div class="col-12 col-lg-6 pe-0 pe-lg-3 ps-0 mb-3">
+                            <img src="<?php echo $imagesFull[7]['url']; ?>" alt="<?php echo $imagesFull[7]['title']; ?>" class="w-100" style="height:617px; object-fit:cover;" data-fancybox="gallery">
+                        </div>
+                    <?php endif; ?>
+                    
+                    <?php if( isset($imagesFull[8]['url']) ): ?>
+                        <div class="col-12 col-lg-6 px-0 mb-3">
+                            <img src="<?php echo $imagesFull[8]['url']; ?>" alt="<?php echo $imagesFull[8]['title']; ?>" class="w-100" style="height:617px; object-fit:cover;" data-fancybox="gallery">
+                        </div>
+                    <?php endif; ?>
 
                 </div>
             </div>
